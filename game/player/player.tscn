@@ -1,10 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://du81omnego2kp"]
+[gd_scene load_steps=32 format=3 uid="uid://du81omnego2kp"]
 
 [ext_resource type="Texture2D" uid="uid://mf4pq2614rwo" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Fall (32x32).png" id="1_bdcph"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_hgwe2"]
 [ext_resource type="Texture2D" uid="uid://bhtsm340spkwp" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Idle (32x32).png" id="1_tj8wf"]
 [ext_resource type="Texture2D" uid="uid://d1xkgxr3dxaru" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Run (32x32).png" id="2_ax1c3"]
 [ext_resource type="Texture2D" uid="uid://dodj01mkpxxy7" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Jump (32x32).png" id="3_leen6"]
+[ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="6_4ka3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_po24l"]
 size = Vector2(25, 28)
@@ -203,12 +204,39 @@ animations = [{
 script = ExtResource("1_hgwe2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 2)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_po24l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -2)
 sprite_frames = SubResource("SpriteFrames_jfv8e")
 animation = &"fall"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = -231.0
+offset_top = -130.0
+offset_right = 230.0
+offset_bottom = 129.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="backBtn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(33, 33)
+layout_mode = 2
+icon = ExtResource("6_4ka3e")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]
