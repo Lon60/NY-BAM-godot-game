@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -400.0
 var dead = false
 
 @onready var animSprite = $AnimatedSprite2D
-@onready var deathScreen = preload("res://menu/deathScreen/deathScreen.tscn") as PackedScene
+@onready var deathScreen = "res://menu/deathScreen/deathScreen.tscn"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -50,4 +50,4 @@ func _physics_process(delta):
 	
 	if dead:
 		dead = false
-		get_tree().change_scene_to_packed(deathScreen)
+		SceneSwitcher.switch_scene(deathScreen)

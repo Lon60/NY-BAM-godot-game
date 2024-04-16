@@ -15,6 +15,10 @@ run/main_scene="res://menu/mainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneSwitcher="*res://scene_switcher.gd"
+
 [display]
 
 window/stretch/mode="viewport"
