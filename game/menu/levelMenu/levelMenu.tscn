@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cw5sdxsiyjux"]
+[gd_scene load_steps=10 format=3 uid="uid://cw5sdxsiyjux"]
 
 [ext_resource type="Script" path="res://menu/levelMenu/levelMenu.gd" id="1_3q0ay"]
 [ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_qiem8"]
 [ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="2_10h25"]
 [ext_resource type="Texture2D" uid="uid://dc6fwomdfrn0l" path="res://assets/pixel-adventure/Menu/Levels/01.png" id="3_0m1hf"]
 [ext_resource type="Texture2D" uid="uid://cdcj4mmabo170" path="res://assets/pixel-adventure/Menu/Levels/02.png" id="4_n0rsg"]
+[ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="4_wd6w1"]
 [ext_resource type="Texture2D" uid="uid://j6h5w7k33ll5" path="res://assets/pixel-adventure/Menu/Levels/03.png" id="5_ueym1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l7a38"]
@@ -37,18 +38,37 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 120
+theme_override_constants/separation = 50
+alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="Seperator" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer"]
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="GameTitle" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="backBtn" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+icon = ExtResource("4_wd6w1")
+flat = true
+expand_icon = true
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.686275, 0.627451, 0.521569, 1)
 theme_override_constants/outline_size = 12
@@ -56,20 +76,18 @@ theme_override_fonts/font = SubResource("SystemFont_s4gl6")
 theme_override_font_sizes/font_size = 64
 text = "Levels"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="Seperator4" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 75
 alignment = 1
 
-[node name="lvl1Btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="lvl1Btn" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 icon = ExtResource("3_0m1hf")
@@ -77,10 +95,10 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Seperator1" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Seperator1" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="lvl2Btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="lvl2Btn" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 icon = ExtResource("4_n0rsg")
@@ -88,10 +106,10 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Seperator2" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="lvl3Btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="lvl3Btn" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 icon = ExtResource("5_ueym1")
@@ -99,6 +117,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/lvl2Btn" to="." method="_on_lvl_2_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl2Btn" to="." method="_on_lvl_2_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]
