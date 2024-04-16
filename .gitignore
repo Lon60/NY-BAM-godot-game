@@ -1,5 +1,5 @@
 # Godot 4+ specific ignores
-/game/.godot/
+/game/.godot
 
 # Godot-specific ignores
 /game/.import/
