@@ -1,9 +1,9 @@
-VBoxContainer
 HBoxContainer
+VBoxContainer
+MarginContainer
 Button
 Label
 Control
-MarginContainer
 TextureRect
 TileMap
 CollisionShape2D
