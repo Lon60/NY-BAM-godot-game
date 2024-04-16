@@ -98,3 +98,7 @@ icon = ExtResource("5_ueym1")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/lvl2Btn" to="." method="_on_lvl_2_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]

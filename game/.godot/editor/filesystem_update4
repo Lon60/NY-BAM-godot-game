@@ -8,3 +8,4 @@ res://menu/levelMenu/levelMenu.tscn
 res://player/player.gd
 res://levels/level1/level1.tscn
 res://levels/level1/level1.gd
+res://menu/levelMenu/levelMenu.gd

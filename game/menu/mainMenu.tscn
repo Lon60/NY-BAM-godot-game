@@ -99,3 +99,5 @@ icon = ExtResource("6_bo8wk")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
