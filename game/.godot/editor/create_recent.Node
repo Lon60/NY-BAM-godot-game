@@ -1,3 +1,7 @@
+CollisionShape2D
+Sprite2D
+RigidBody2D
+TileMap
 Button
 VBoxContainer
 HBoxContainer
@@ -5,8 +9,6 @@ MarginContainer
 Control
 Label
 TextureRect
-TileMap
-CollisionShape2D
 AnimatedSprite2D
 CharacterBody2D
 Camera2D

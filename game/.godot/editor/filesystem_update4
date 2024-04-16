@@ -11,3 +11,4 @@ res://levels/level1/level1.gd
 res://menu/levelMenu/levelMenu.gd
 res://player/player.tscn
 res://scene_switcher.gd
+res://items/chain/chain.tscn

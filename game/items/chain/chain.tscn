@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://4r3v1dswwdts"]
+
+[ext_resource type="Texture2D" uid="uid://cj47cn4l5rhkc" path="res://assets/pixel-adventure/Traps/Platforms/Chain.png" id="1_2v4q3"]
+[ext_resource type="Script" path="res://items/chain/chain.gd" id="1_18jet"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k7t2m"]
+radius = 3.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_18jet")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2v4q3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k7t2m")
