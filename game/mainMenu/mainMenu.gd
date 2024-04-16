@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var play_btn = $MarginContainer/HBoxContainer/VBoxContainer/PlayBtn as Button
+@onready var play_btn = $MarginContainer/HBoxContainer/HBoxContainer/VBoxContainer/PlayBtn as Button
 @onready var lvl1 = preload("res://levels/level1/level1.tscn")
 
 

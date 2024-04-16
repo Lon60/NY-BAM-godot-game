@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cm0r0n648lnh0"]
+[gd_scene load_steps=9 format=3 uid="uid://cm0r0n648lnh0"]
 
 [ext_resource type="Script" path="res://mainMenu/mainMenu.gd" id="1_0y1yl"]
 [ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_73d4t"]
 [ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="1_r1kdi"]
+[ext_resource type="Texture2D" uid="uid://u6ffipvnqqce" path="res://assets/pixel-adventure/Menu/Buttons/Play.png" id="4_uq31w"]
+[ext_resource type="Texture2D" uid="uid://c2ovflm8degad" path="res://assets/pixel-adventure/Menu/Buttons/Settings.png" id="5_gvkiw"]
+[ext_resource type="Texture2D" uid="uid://dbh3awkmd7kpo" path="res://assets/pixel-adventure/Menu/Buttons/Leaderboard.png" id="6_bo8wk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_61ui2"]
 shader = ExtResource("1_73d4t")
@@ -55,29 +58,44 @@ horizontal_alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
 alignment = 1
 
-[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="PlayBtn" type="Button" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+icon = ExtResource("4_uq31w")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="PlayBtn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 32)
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2"]
 layout_mode = 2
-text = "Play"
+theme_override_constants/separation = -1
+alignment = 1
 
-[node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = ExtResource("5_gvkiw")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
-text = "Settings"
-
-[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Leaderboard"
+icon = ExtResource("6_bo8wk")
+flat = true
+icon_alignment = 1
+expand_icon = true
