@@ -1,10 +1,7 @@
-res://mainMenu/mainMenu.tscn
+res://menu/deathScreen/deathScreen.tscn
 res://assets/bg.gdshader
 res://assets/bg2.gdshader
-res://levels/level1/level1.tscn
-res://player/player.tscn
-res://mainMenu/mainMenu.gd
-res://mainMenu/levelMenu/levelMenu.tscn
-res://mainMenu/levelMenu/levelMenu.gd
-res://mainMenu/deathScreen/deathScreen.tscn
-res://mainMenu/deathScreen/deathScreen.gd
+res://menu/deathScreen/deathScreen.gd
+res://menu/mainMenu.gd
+res://menu/mainMenu.tscn
+res://menu/levelMenu/levelMenu.tscn

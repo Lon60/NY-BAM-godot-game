@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cm0r0n648lnh0"]
 
-[ext_resource type="Script" path="res://mainMenu/mainMenu.gd" id="1_0y1yl"]
+[ext_resource type="Script" path="res://menu/mainMenu.gd" id="1_0y1yl"]
 [ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_73d4t"]
 [ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="1_r1kdi"]
 [ext_resource type="Texture2D" uid="uid://u6ffipvnqqce" path="res://assets/pixel-adventure/Menu/Buttons/Play.png" id="4_uq31w"]

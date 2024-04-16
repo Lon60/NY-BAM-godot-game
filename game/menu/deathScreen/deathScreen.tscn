@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://byj8vcf62axd3"]
 
-[ext_resource type="Script" path="res://mainMenu/deathScreen/deathScreen.gd" id="1_gsmvy"]
+[ext_resource type="Script" path="res://menu/deathScreen/deathScreen.gd" id="1_gsmvy"]
 [ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_urw4m"]
 [ext_resource type="Texture2D" uid="uid://dlq1r4fx753b2" path="res://assets/pixel-adventure/Background/Pink.png" id="2_tcx5b"]
 

@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var play_btn = $MarginContainer/HBoxContainer/HBoxContainer/VBoxContainer/PlayBtn as Button
-@onready var levelMenu = preload("res://mainMenu/levelMenu/levelMenu.tscn")
+@onready var levelMenu = preload("res://menu/levelMenu/levelMenu.tscn")
 
 
 func _ready():
