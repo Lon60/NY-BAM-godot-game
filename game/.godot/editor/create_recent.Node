@@ -1,6 +1,8 @@
+Button
+VBoxContainer
+HBoxContainer
 Label
 Control
-VBoxContainer
 MarginContainer
 TextureRect
 TileMap
