@@ -6,3 +6,5 @@ res://player/player.tscn
 res://mainMenu/mainMenu.gd
 res://mainMenu/levelMenu/levelMenu.tscn
 res://mainMenu/levelMenu/levelMenu.gd
+res://mainMenu/deathScreen/deathScreen.tscn
+res://mainMenu/deathScreen/deathScreen.gd

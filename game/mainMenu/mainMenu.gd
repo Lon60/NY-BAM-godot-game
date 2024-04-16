@@ -9,5 +9,3 @@ func _ready():
 	
 func _play_btn_pressed():
 	get_tree().change_scene_to_packed(levelMenu)
-
-

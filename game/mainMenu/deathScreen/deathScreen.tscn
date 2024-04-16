@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://byj8vcf62axd3"]
+
+[ext_resource type="Script" path="res://mainMenu/deathScreen/deathScreen.gd" id="1_gsmvy"]
+[ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_urw4m"]
+[ext_resource type="Texture2D" uid="uid://dlq1r4fx753b2" path="res://assets/pixel-adventure/Background/Pink.png" id="2_tcx5b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wa2eh"]
+shader = ExtResource("1_urw4m")
+
+[sub_resource type="SystemFont" id="SystemFont_igssy"]
+font_names = PackedStringArray("Press Start 2P")
+
+[sub_resource type="SystemFont" id="SystemFont_0drcw"]
+font_names = PackedStringArray("Press Start 2P")
+
+[node name="DeathScreen" type="Node2D"]
+script = ExtResource("1_gsmvy")
+
+[node name="background" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_wa2eh")
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_tcx5b")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Seperator" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.686275, 0.627451, 0.521569, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_igssy")
+theme_override_font_sizes/font_size = 48
+text = "Sorry..."
+horizontal_alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GameTitle2" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.686275, 0.627451, 0.521569, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_igssy")
+theme_override_font_sizes/font_size = 18
+text = "You died"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="backBtn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(520, 80)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_0drcw")
+theme_override_font_sizes/font_size = 28
+text = "Back To Main Menu"

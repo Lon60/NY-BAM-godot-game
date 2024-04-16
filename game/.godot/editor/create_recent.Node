@@ -1,7 +1,7 @@
-HBoxContainer
 VBoxContainer
-MarginContainer
+HBoxContainer
 Button
+MarginContainer
 Label
 Control
 TextureRect
