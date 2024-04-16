@@ -1,7 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://du81omnego2kp"]
+[gd_scene load_steps=31 format=3 uid="uid://du81omnego2kp"]
 
+[ext_resource type="Texture2D" uid="uid://mf4pq2614rwo" path="res://assets/Main Characters/Ninja Frog/Fall (32x32).png" id="1_bdcph"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_hgwe2"]
 [ext_resource type="Texture2D" uid="uid://bhtsm340spkwp" path="res://assets/Main Characters/Ninja Frog/Idle (32x32).png" id="1_tj8wf"]
 [ext_resource type="Texture2D" uid="uid://d1xkgxr3dxaru" path="res://assets/Main Characters/Ninja Frog/Run (32x32).png" id="2_ax1c3"]
+[ext_resource type="Texture2D" uid="uid://dodj01mkpxxy7" path="res://assets/Main Characters/Ninja Frog/Jump (32x32).png" id="3_leen6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_po24l"]
 size = Vector2(25, 28)
@@ -102,6 +105,14 @@ region = Rect2(352, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("1_bdcph")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lv5n0")
 }, {
 "duration": 1.0,
@@ -137,6 +148,14 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_leen6")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -181,6 +200,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_hgwe2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 2)
@@ -188,7 +208,7 @@ shape = SubResource("RectangleShape2D_po24l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jfv8e")
-animation = &"run"
-frame_progress = 0.608262
+animation = &"fall"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true

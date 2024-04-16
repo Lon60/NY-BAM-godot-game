@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713192451
+::res://::1713247245
 icon.svg::CompressedTexture2D::5422186716517332035::1713188405::1713188430::1::::<><>::
 ::res://assets/::1713189614
 ::res://assets/Background/::1713189682
@@ -211,7 +211,8 @@ Idle.png::CompressedTexture2D::2293292494270896410::1713189591::1713189681::1:::
 ::res://assets/Traps/Trampoline/::1713189681
 Idle.png::CompressedTexture2D::2348269421701161611::1713189591::1713189681::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::4657501765248043862::1713189591::1713189681::1::::<><>::
-::res://character/::1713192451
 ::res://levels/::1713192411
 ::res://levels/level1/::1713192422
 level1.tscn::PackedScene::4893684516553355494::1713192422::0::1::::<><>::
+::res://player/::1713192815
+player.tscn::PackedScene::8632767683203520735::1713192815::0::1::::<><>::uid://bhtsm340spkwp::::res://assets/Main Characters/Ninja Frog/Idle (32x32).png<>uid://d1xkgxr3dxaru::::res://assets/Main Characters/Ninja Frog/Run (32x32).png
