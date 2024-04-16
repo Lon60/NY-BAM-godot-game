@@ -14,10 +14,6 @@ config/name="NoserYoung: The BAM Game"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[display]
-
-window/stretch/scale=2.5
-
 [input]
 
 ui_left={

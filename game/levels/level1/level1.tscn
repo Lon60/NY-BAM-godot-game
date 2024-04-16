@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbysje8huavuk"]
+[gd_scene load_steps=8 format=3 uid="uid://cbysje8huavuk"]
 
-[ext_resource type="Texture2D" uid="uid://u7h0qtobbmes" path="res://assets/Terrain/Terrain (16x16).png" id="1_40dvt"]
+[ext_resource type="Texture2D" uid="uid://u7h0qtobbmes" path="res://assets/pixel-adventure/Terrain/Terrain (16x16).png" id="1_40dvt"]
+[ext_resource type="Texture2D" uid="uid://nnlwtl7vvqx3" path="res://assets/pixel-adventure/Background/Brown.png" id="2_ijban"]
 [ext_resource type="PackedScene" uid="uid://du81omnego2kp" path="res://player/player.tscn" id="2_xt52j"]
+[ext_resource type="Shader" path="res://assets/bg.gdshader" id="3_54ov5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_js2jj"]
+shader = ExtResource("3_54ov5")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wumvy"]
 texture = ExtResource("1_40dvt")
@@ -452,6 +457,17 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wumvy")
 
 [node name="Level1" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_js2jj")
+offset_left = -594.0
+offset_top = -340.0
+offset_right = 558.0
+offset_bottom = 305.0
+texture = ExtResource("2_ijban")
+stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_40dac")

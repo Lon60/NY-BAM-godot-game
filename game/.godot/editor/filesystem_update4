@@ -1,3 +1,5 @@
-res://player/player.tscn
-res://player/player.gd
+res://mainMenu/mainMenu.tscn
+res://assets/bg.gdshader
+res://assets/bg2.gdshader
 res://levels/level1/level1.tscn
+res://player/player.tscn
