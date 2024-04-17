@@ -7,7 +7,7 @@
 size = Vector2(15, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3fop"]
-size = Vector2(20, 82.5)
+size = Vector2(20, 120)
 
 [node name="CaveTrap" type="Area2D"]
 script = ExtResource("1_rap1s")
@@ -24,7 +24,8 @@ flip_v = true
 [node name="Dedect" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dedect"]
-position = Vector2(-40, 26)
+position = Vector2(-39, 49)
 shape = SubResource("RectangleShape2D_r3fop")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="Dedect" to="." method="_on_dedect_body_entered"]

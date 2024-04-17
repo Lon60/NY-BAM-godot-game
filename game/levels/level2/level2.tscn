@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ccgv0p05wqfmn"]
+[gd_scene load_steps=17 format=3 uid="uid://ccgv0p05wqfmn"]
 
 [ext_resource type="Script" path="res://levels/level2/level2.gd" id="1_qgw3j"]
 [ext_resource type="Shader" path="res://assets/bg.gdshader" id="1_r4pm5"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bttgxndvblpp0" path="res://assets/cave/01 bg.png" id="4_ro7rt"]
 [ext_resource type="PackedScene" uid="uid://c6e4mca460a0k" path="res://items/finish/finish.tscn" id="6_plo5r"]
 [ext_resource type="Texture2D" uid="uid://sl11chhxyb02" path="res://assets/cave/tilesetcave.png" id="7_18o3g"]
+[ext_resource type="PackedScene" uid="uid://cw7v8xnk4oe15" path="res://items/caveStrap/caveStrap.tscn" id="12_3dkj2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ijxn2"]
 shader = ExtResource("1_r4pm5")
@@ -824,3 +825,6 @@ position = Vector2(-256, -120)
 [node name="Finish" parent="." instance=ExtResource("6_plo5r")]
 position = Vector2(759, 379)
 level = 2
+
+[node name="CaveTrap" parent="." instance=ExtResource("12_3dkj2")]
+position = Vector2(415, 309)
