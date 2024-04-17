@@ -21,3 +21,11 @@ func canAccessLvl(level):
 	else:
 		return false
 		
+
+func _input(event):
+	if event.is_action_pressed("unlock_levels"):
+		unlock_all_levels()
+
+func unlock_all_levels():
+	for level in levels.keys():
+		levels[level] = true

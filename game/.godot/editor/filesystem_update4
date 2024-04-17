@@ -21,3 +21,5 @@ res://player/player.gd
 res://scene_switcher.gd
 res://items/quicksand/quicksand.tscn
 res://items/quicksand/quicksand.gd
+res://items/caveStrap/caveStrap.tscn
+res://items/caveStrap/caveStrap.gd

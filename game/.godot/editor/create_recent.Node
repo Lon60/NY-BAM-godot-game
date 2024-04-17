@@ -1,9 +1,9 @@
+CollisionShape2D
+Area2D
 CanvasGroup
 TextureRect
 Node
 TileMap
-CollisionShape2D
-Area2D
 VBoxContainer
 HBoxContainer
 AnimatedSprite2D
