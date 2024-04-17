@@ -1,15 +1,44 @@
-[gd_scene load_steps=35 format=3 uid="uid://du81omnego2kp"]
+[gd_scene load_steps=43 format=3 uid="uid://du81omnego2kp"]
 
 [ext_resource type="Texture2D" uid="uid://mf4pq2614rwo" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Fall (32x32).png" id="1_bdcph"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_hgwe2"]
 [ext_resource type="Texture2D" uid="uid://bhtsm340spkwp" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Idle (32x32).png" id="1_tj8wf"]
 [ext_resource type="Texture2D" uid="uid://d1xkgxr3dxaru" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Run (32x32).png" id="2_ax1c3"]
+[ext_resource type="Texture2D" uid="uid://iwaay3m7g3cs" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Hit (32x32).png" id="3_5aje3"]
 [ext_resource type="Texture2D" uid="uid://dodj01mkpxxy7" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Jump (32x32).png" id="3_leen6"]
 [ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="6_4ka3e"]
 [ext_resource type="Texture2D" uid="uid://u7h0qtobbmes" path="res://assets/pixel-adventure/Terrain/Terrain (16x16).png" id="7_ebtyo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_po24l"]
 size = Vector2(25, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsar5"]
+atlas = ExtResource("3_5aje3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k3i6"]
+atlas = ExtResource("3_5aje3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4syh3"]
+atlas = ExtResource("3_5aje3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_541of"]
+atlas = ExtResource("3_5aje3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei0vi"]
+atlas = ExtResource("3_5aje3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ypl8"]
+atlas = ExtResource("3_5aje3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrtah"]
+atlas = ExtResource("3_5aje3")
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lv5n0"]
 atlas = ExtResource("1_tj8wf")
@@ -112,6 +141,32 @@ animations = [{
 "loop": true,
 "name": &"fall",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsar5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k3i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4syh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_541of")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei0vi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ypl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrtah")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -650,7 +705,9 @@ shape = SubResource("RectangleShape2D_po24l")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -2)
 sprite_frames = SubResource("SpriteFrames_jfv8e")
-animation = &"fall"
+animation = &"hit"
+frame = 6
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)

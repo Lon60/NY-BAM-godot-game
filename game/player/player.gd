@@ -4,6 +4,7 @@ extends CharacterBody2D
 var SPEED: float = 300.0
 const JUMP_VELOCITY: float = -400.0
 var dead: bool = false
+var animPlaySpecial = false
 
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
 var deathScreen: String = "res://menu/deathScreen/deathScreen.tscn"
@@ -22,9 +23,9 @@ func _physics_process(delta):
 		else:
 				animSprite.play("jump")
 	else:
-		if(velocity.x == 0):
+		if(velocity.x == 0 && !animPlaySpecial):
 				animSprite.play("idle")
-		else:
+		elif !animPlaySpecial:
 				animSprite.play("run")
 
 	# Handle jump.
@@ -51,6 +52,10 @@ func _physics_process(delta):
 	
 	if dead:
 		dead = false
+		animPlaySpecial = true
+		animSprite.play("hit")
+		await get_tree().create_timer(0.6).timeout
+		animPlaySpecial = false
 		SceneSwitcher.switch_scene(deathScreen)
 
 func _on_back_btn_pressed():
