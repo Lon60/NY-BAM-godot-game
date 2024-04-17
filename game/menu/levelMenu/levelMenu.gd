@@ -1,16 +1,16 @@
 extends Node2D
 
-var lvl1 = "res://levels/level1/level1.tscn"
-var lvl2 = "res://levels/level2/level2.tscn"
-var lvl3 = "res://levels/level3/level3.tscn"
-var mainMenu = "res://menu/mainMenu.tscn"
+var lvl1: String = "res://levels/level1/level1.tscn"
+var lvl2: String = "res://levels/level2/level2.tscn"
+var lvl3: String = "res://levels/level3/level3.tscn"
+var mainMenu: String = "res://menu/mainMenu.tscn"
 
-@onready var lvl_1_btn = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl1Btn
-@onready var lvl_2_btn = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl2Btn
-@onready var lvl_3_btn = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl3Btn
+@onready var lvl_1_btn: Button = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl1Btn
+@onready var lvl_2_btn: Button = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl2Btn
+@onready var lvl_3_btn: Button = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl3Btn
 
-const lvl2_icon = preload("res://assets/pixel-adventure/Menu/Levels/02.png")
-const lvl3_icon = preload("res://assets/pixel-adventure/Menu/Levels/03.png")
+const lvl2_icon: CompressedTexture2D = preload("res://assets/pixel-adventure/Menu/Levels/02.png")
+const lvl3_icon: CompressedTexture2D = preload("res://assets/pixel-adventure/Menu/Levels/03.png")
 
 func _process(delta):
 	if GlobalController.canAccessLvl(2):

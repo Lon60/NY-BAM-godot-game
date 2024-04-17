@@ -1,6 +1,6 @@
 extends Node2D
 
-var levelMenu = "res://menu/levelMenu/levelMenu.tscn"
+var levelMenu: String = "res://menu/levelMenu/levelMenu.tscn"
 
 
 func _on_play_btn_pressed():
