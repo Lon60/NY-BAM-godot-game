@@ -9,3 +9,4 @@ res://menu/deathScreen/deathScreen.tscn
 res://menu/levelMenu/levelMenu.tscn
 res://items/fan/fan.tscn
 res://player/player.tscn
+res://global_controller.gd
