@@ -21,12 +21,15 @@ func _process(delta):
 		lvl_3_btn.disabled = false
 		
 func _on_lvl_1_btn_pressed():
+	GlobalController.lastPlayedLvl = 1
 	SceneSwitcher.switch_scene(lvl1)
 	
 func _on_lvl_2_btn_pressed():
+	GlobalController.lastPlayedLvl = 2
 	SceneSwitcher.switch_scene(lvl2)
 
 func _on_lvl_3_btn_pressed():
+	GlobalController.lastPlayedLvl = 3
 	SceneSwitcher.switch_scene(lvl3)
 
 func _on_back_btn_pressed():

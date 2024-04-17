@@ -5,6 +5,8 @@ var levels: Dictionary = {
 	2: false,
 	3: false
 }
+
+var lastPlayedLvl: int = 1
 	
 func lvlPassed(level):
 	levels[level] = true
@@ -14,3 +16,4 @@ func canAccessLvl(level):
 		return true
 	else:
 		return false
+		
