@@ -1,4 +1,5 @@
 CanvasGroup
+TextureRect
 Node
 TileMap
 CollisionShape2D
@@ -11,5 +12,3 @@ Sprite2D
 RigidBody2D
 Button
 MarginContainer
-Control
-Label
