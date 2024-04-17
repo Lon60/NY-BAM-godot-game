@@ -9,3 +9,5 @@ res://items/caveStrap/caveStrap.gd
 res://player/player.gd
 res://assets/rockscavetree/info.txt
 res://levels/level2/level2.gd
+res://levels/level2/irisShot.gdshader
+res://assets/irisShot.gdshader
