@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://bwp3w4nyfudpn"]
+
+[ext_resource type="Texture2D" uid="uid://c6ues4yswq3ie" path="res://assets/pixel-adventure/Traps/Fan/On (24x8).png" id="1_g7lle"]
+[ext_resource type="Script" path="res://items/fan/fan.gd" id="1_gdb1m"]
+[ext_resource type="Texture2D" uid="uid://bl0f130y5e4wu" path="res://assets/pixel-adventure/Traps/Sand Mud Ice/Ice Particle.png" id="2_om0vf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0xxg"]
+atlas = ExtResource("1_g7lle")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daty4"]
+atlas = ExtResource("1_g7lle")
+region = Rect2(24, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fffh0"]
+atlas = ExtResource("1_g7lle")
+region = Rect2(48, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16f6a"]
+atlas = ExtResource("1_g7lle")
+region = Rect2(72, 0, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enlbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0xxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daty4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fffh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16f6a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8kob"]
+size = Vector2(25, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4aha"]
+size = Vector2(20, 145)
+
+[node name="Fan" type="Area2D"]
+script = ExtResource("1_gdb1m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_enlbx")
+animation = &"idle"
+frame_progress = 0.292901
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_k8kob")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, -12)
+amount = 30
+randomness = 0.1
+texture = ExtResource("2_om0vf")
+emission_shape = 2
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(0, -280)
+scale_amount_min = 0.2
+
+[node name="PlayerDedect" type="Area2D" parent="."]
+gravity = -980.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDedect"]
+position = Vector2(0, -74.5)
+shape = SubResource("RectangleShape2D_a4aha")
+
+[connection signal="body_entered" from="PlayerDedect" to="." method="_on_player_dedect_body_entered"]
+[connection signal="body_exited" from="PlayerDedect" to="." method="_on_player_dedect_body_exited"]

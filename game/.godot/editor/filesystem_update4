@@ -4,3 +4,6 @@ res://assets/bg.gdshader
 res://levels/level1/level1.tscn
 res://menu/mainMenu.tscn
 res://menu/deathScreen/deathScreen.tscn
+res://items/fan/fan.tscn
+res://player/player.tscn
+res://items/fan/fan.gd

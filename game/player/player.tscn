@@ -640,7 +640,7 @@ texture = ExtResource("7_ebtyo")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5a2j3")
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_hgwe2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
