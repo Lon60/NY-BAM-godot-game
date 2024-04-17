@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw7v8xnk4oe15"]
+[gd_scene load_steps=7 format=3 uid="uid://cw7v8xnk4oe15"]
 
 [ext_resource type="Script" path="res://items/caveStrap/caveStrap.gd" id="1_rap1s"]
 [ext_resource type="Texture2D" uid="uid://7w5gslgyhjne" path="res://assets/pixel-adventure/Traps/Spikes/Idle.png" id="1_s744v"]
+
+[sub_resource type="Gradient" id="Gradient_41r8s"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_soom0"]
+gradient = SubResource("Gradient_41r8s")
+width = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0r1b7"]
 size = Vector2(15, 6)
@@ -9,23 +15,41 @@ size = Vector2(15, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3fop"]
 size = Vector2(20, 120)
 
-[node name="CaveTrap" type="Area2D"]
+[node name="CaveTrap" type="RigidBody2D"]
+freeze = true
 script = ExtResource("1_rap1s")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 30
+lifetime = 0.7
+one_shot = true
+explosiveness = 0.6
+randomness = 0.2
+texture = SubResource("GradientTexture1D_soom0")
+direction = Vector2(1, 1)
+spread = 180.0
+initial_velocity_min = 150.0
+initial_velocity_max = 175.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, -12)
 shape = SubResource("RectangleShape2D_0r1b7")
 
-[node name="Idle" type="Sprite2D" parent="."]
-position = Vector2(-2, -8)
+[node name="png" type="Sprite2D" parent="."]
+position = Vector2(0, 4)
 texture = ExtResource("1_s744v")
 flip_v = true
 
 [node name="Dedect" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dedect"]
-position = Vector2(-39, 49)
+position = Vector2(-39, 57)
 shape = SubResource("RectangleShape2D_r3fop")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="CaveTrap_" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaveTrap_"]
+shape = SubResource("RectangleShape2D_0r1b7")
+
 [connection signal="body_entered" from="Dedect" to="." method="_on_dedect_body_entered"]
+[connection signal="body_entered" from="CaveTrap_" to="." method="_on_cave_trap__body_entered"]
