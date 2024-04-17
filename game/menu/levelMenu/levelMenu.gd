@@ -1,8 +1,8 @@
 extends Node2D
 
-var lvl1: String = "res://levels/level1/level1.tscn"
-var lvl2: String = "res://levels/level2/level2.tscn"
-var lvl3: String = "res://levels/level3/level3.tscn"
+var lvl1: String = GlobalController.lvl1
+var lvl2: String = GlobalController.lvl2
+var lvl3: String = GlobalController.lvl3
 var mainMenu: String = "res://menu/mainMenu.tscn"
 
 @onready var lvl_1_btn: Button = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl1Btn
