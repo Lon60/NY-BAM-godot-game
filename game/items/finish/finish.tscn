@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://c6e4mca460a0k"]
+
+[ext_resource type="Script" path="res://items/finish/finish.gd" id="1_as0fi"]
+[ext_resource type="Texture2D" uid="uid://cqfkk8tn0k0mt" path="res://assets/pixel-adventure/Items/Checkpoints/End/End (Pressed) (64x64).png" id="1_s78yl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj032"]
+size = Vector2(47, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ma1c5"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq1r6"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1ntk"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bou8m"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2672k"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4fdu"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i61w2"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7mw5"]
+atlas = ExtResource("1_s78yl")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fnuo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ma1c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq1r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1ntk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bou8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2672k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4fdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i61w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7mw5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[node name="Finish" type="Area2D"]
+script = ExtResource("1_as0fi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 8.5)
+shape = SubResource("RectangleShape2D_qj032")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0fnuo")
+animation = &"idle"
+frame_progress = 0.135154
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

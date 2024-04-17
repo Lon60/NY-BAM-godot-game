@@ -1,6 +1,6 @@
-Area2D
 AnimatedSprite2D
 CollisionShape2D
+Area2D
 CPUParticles2D
 Sprite2D
 RigidBody2D

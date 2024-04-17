@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbysje8huavuk"]
+[gd_scene load_steps=11 format=3 uid="uid://cbysje8huavuk"]
 
 [ext_resource type="Script" path="res://levels/level1/level1.gd" id="1_7r0un"]
 [ext_resource type="Texture2D" uid="uid://u7h0qtobbmes" path="res://assets/pixel-adventure/Terrain/Terrain (16x16).png" id="1_40dvt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://du81omnego2kp" path="res://player/player.tscn" id="2_xt52j"]
 [ext_resource type="Shader" path="res://assets/bg.gdshader" id="3_54ov5"]
 [ext_resource type="PackedScene" uid="uid://bwp3w4nyfudpn" path="res://items/fan/fan.tscn" id="6_xvmgp"]
+[ext_resource type="PackedScene" uid="uid://c6e4mca460a0k" path="res://items/finish/finish.tscn" id="7_wyut7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_js2jj"]
 shader = ExtResource("3_54ov5")
@@ -491,3 +492,6 @@ position = Vector2(-14, -18)
 
 [node name="Fan" parent="." instance=ExtResource("6_xvmgp")]
 position = Vector2(469, 52)
+
+[node name="Finish" parent="." instance=ExtResource("7_wyut7")]
+position = Vector2(721, 16)

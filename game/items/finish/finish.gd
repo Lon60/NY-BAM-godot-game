@@ -1,8 +1,6 @@
-extends Node2D
+extends Area2D
 
 var levelMenu = "res://menu/levelMenu/levelMenu.tscn"
 
-
-func _on_play_btn_pressed():
+func _on_body_entered(body):
 	SceneSwitcher.switch_scene(levelMenu)
-

@@ -1,9 +1,11 @@
-res://menu/levelMenu/levelMenu.tscn
 res://assets/bg2.gdshader
 res://assets/bg.gdshader
+res://items/finish/finish.tscn
+res://items/finish/finish.gd
+res://menu/mainMenu.gd
 res://levels/level1/level1.tscn
 res://menu/mainMenu.tscn
 res://menu/deathScreen/deathScreen.tscn
+res://menu/levelMenu/levelMenu.tscn
 res://items/fan/fan.tscn
 res://player/player.tscn
-res://items/fan/fan.gd
