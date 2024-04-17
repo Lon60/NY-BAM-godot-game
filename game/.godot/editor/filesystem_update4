@@ -19,3 +19,5 @@ res://menu/deathScreen/deathScreen.gd
 res://levels/level3/level3.gd
 res://player/player.gd
 res://scene_switcher.gd
+res://items/quicksand/quicksand.tscn
+res://items/quicksand/quicksand.gd

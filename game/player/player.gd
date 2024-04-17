@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED: int = 300.0
+var SPEED: int = 300.0
 const JUMP_VELOCITY: int = -400.0
 var dead: bool = false
 
