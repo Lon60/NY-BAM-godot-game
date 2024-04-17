@@ -10,7 +10,7 @@ gradient = SubResource("Gradient_41r8s")
 width = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0r1b7"]
-size = Vector2(15, 6)
+size = Vector2(15, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3fop"]
 size = Vector2(20, 120)
@@ -33,22 +33,25 @@ initial_velocity_min = 150.0
 initial_velocity_max = 175.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_0r1b7")
 
 [node name="png" type="Sprite2D" parent="."]
-position = Vector2(0, 4)
+position = Vector2(0, 52)
+scale = Vector2(1, 7)
 texture = ExtResource("1_s744v")
 flip_v = true
 
 [node name="Dedect" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dedect"]
-position = Vector2(-39, 57)
+position = Vector2(-78, 60)
 shape = SubResource("RectangleShape2D_r3fop")
 
 [node name="CaveTrap_" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CaveTrap_"]
+position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_0r1b7")
 
 [connection signal="body_entered" from="Dedect" to="." method="_on_dedect_body_entered"]
