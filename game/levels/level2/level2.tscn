@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ccgv0p05wqfmn"]
+[gd_scene load_steps=20 format=3 uid="uid://ccgv0p05wqfmn"]
 
 [ext_resource type="Script" path="res://levels/level2/level2.gd" id="1_qgw3j"]
 [ext_resource type="Shader" path="res://assets/bg.gdshader" id="1_r4pm5"]
@@ -1454,6 +1454,9 @@ sources/0 = SubResource("TileSetAtlasSource_wumvy")
 sources/1 = SubResource("TileSetAtlasSource_5qxce")
 sources/2 = SubResource("TileSetAtlasSource_vaigb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqxnj"]
+size = Vector2(39, 70)
+
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_qgw3j")
 
@@ -1540,3 +1543,14 @@ angular_damp = -1.0
 [node name="CaveTrap3" parent="caveTrapGroup" instance=ExtResource("12_3dkj2")]
 position = Vector2(272, 295)
 angular_velocity = -0.575959
+
+[node name="CaveEntry" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaveEntry"]
+position = Vector2(238.5, -85)
+shape = SubResource("RectangleShape2D_yqxnj")
+
+[node name="Cave SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(-12, 369)
+
+[connection signal="body_entered" from="CaveEntry" to="." method="_on_cave_entry_body_entered"]
