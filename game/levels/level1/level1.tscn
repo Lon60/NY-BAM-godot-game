@@ -495,3 +495,4 @@ position = Vector2(469, 52)
 
 [node name="Finish" parent="." instance=ExtResource("7_wyut7")]
 position = Vector2(721, 16)
+level = 1

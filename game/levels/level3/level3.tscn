@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://65vxrwb7myee"]
+[gd_scene load_steps=10 format=3 uid="uid://65vxrwb7myee"]
 
 [ext_resource type="Shader" path="res://assets/bg.gdshader" id="1_thl0y"]
 [ext_resource type="Script" path="res://levels/level3/level3.gd" id="1_thpeu"]
 [ext_resource type="Texture2D" uid="uid://nnlwtl7vvqx3" path="res://assets/pixel-adventure/Background/Brown.png" id="2_cyi11"]
 [ext_resource type="Texture2D" uid="uid://u7h0qtobbmes" path="res://assets/pixel-adventure/Terrain/Terrain (16x16).png" id="3_qmwdc"]
 [ext_resource type="PackedScene" uid="uid://du81omnego2kp" path="res://player/player.tscn" id="4_md80t"]
+[ext_resource type="PackedScene" uid="uid://c6e4mca460a0k" path="res://items/finish/finish.tscn" id="6_qbsvt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ijxn2"]
 shader = ExtResource("1_thl0y")
@@ -488,3 +489,7 @@ layer_0/tile_data = PackedInt32Array(65531, 393216, 0, 65532, 458752, 0, 65533, 
 
 [node name="player" parent="." instance=ExtResource("4_md80t")]
 position = Vector2(-254, -99)
+
+[node name="Finish" parent="." instance=ExtResource("6_qbsvt")]
+position = Vector2(-126, -115)
+level = 3
