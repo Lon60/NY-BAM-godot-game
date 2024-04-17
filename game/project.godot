@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneSwitcher="*res://scene_switcher.gd"
-GlobalController="*res://global_controller.gd"
 
 [display]
 

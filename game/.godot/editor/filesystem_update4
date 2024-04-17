@@ -10,3 +10,8 @@ res://menu/levelMenu/levelMenu.tscn
 res://items/fan/fan.tscn
 res://player/player.tscn
 res://global_controller.gd
+res://levels/level2/level2.tscn
+res://levels/level3/level3.tscn
+res://menu/levelMenu/levelMenu.gd
+res://levels/level1/level1.gd
+res://levels/level2/level2.gd
