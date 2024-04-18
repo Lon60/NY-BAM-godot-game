@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cw7v8xnk4oe15"]
+[gd_scene load_steps=9 format=3 uid="uid://cw7v8xnk4oe15"]
 
 [ext_resource type="Script" path="res://items/caveStrap/caveStrap.gd" id="1_rap1s"]
 [ext_resource type="Texture2D" uid="uid://7w5gslgyhjne" path="res://assets/pixel-adventure/Traps/Spikes/Idle.png" id="1_s744v"]
+[ext_resource type="Texture2D" uid="uid://dc6fwomdfrn0l" path="res://assets/pixel-adventure/Menu/Levels/01.png" id="3_avn6f"]
+[ext_resource type="Texture2D" uid="uid://c5m61pkqt6ecp" path="res://assets/pixel-adventure/Menu/Levels/locked.png" id="4_f7mbn"]
 
 [sub_resource type="Gradient" id="Gradient_41r8s"]
 
@@ -53,6 +55,42 @@ shape = SubResource("RectangleShape2D_r3fop")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CaveTrap_"]
 position = Vector2(-0.5, 20.5)
 shape = SubResource("RectangleShape2D_0r1b7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="lvl1Btn" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+icon = ExtResource("3_avn6f")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Seperator1" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="lvl2Btn" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+disabled = true
+icon = ExtResource("4_f7mbn")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Seperator2" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="lvl3Btn" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+disabled = true
+icon = ExtResource("4_f7mbn")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="body_entered" from="Dedect" to="." method="_on_dedect_body_entered"]
 [connection signal="body_entered" from="CaveTrap_" to="." method="_on_cave_trap__body_entered"]
