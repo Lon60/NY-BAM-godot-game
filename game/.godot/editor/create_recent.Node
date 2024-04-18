@@ -1,13 +1,13 @@
 CollisionShape2D
 Area2D
-Timer
 Control
-Container
+AnimatedSprite2D
 CanvasGroup
+Timer
+Container
 TextEdit
 Label
 HBoxContainer
-AnimatedSprite2D
 TextureRect
 Marker2D
 AnimationPlayer
