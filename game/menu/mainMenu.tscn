@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="1_r1kdi"]
 [ext_resource type="Texture2D" uid="uid://u6ffipvnqqce" path="res://assets/pixel-adventure/Menu/Buttons/Play.png" id="4_uq31w"]
 [ext_resource type="Texture2D" uid="uid://c2ovflm8degad" path="res://assets/pixel-adventure/Menu/Buttons/Settings.png" id="5_gvkiw"]
-[ext_resource type="Texture2D" uid="uid://dbh3awkmd7kpo" path="res://assets/pixel-adventure/Menu/Buttons/Leaderboard.png" id="6_bo8wk"]
+[ext_resource type="Texture2D" uid="uid://bv2vqrus4e0r2" path="res://assets/pixel-adventure/Menu/Buttons/Close.png" id="6_1f38h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_61ui2"]
 shader = ExtResource("1_73d4t")
@@ -95,9 +95,10 @@ layout_mode = 2
 [node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
-icon = ExtResource("6_bo8wk")
+icon = ExtResource("6_1f38h")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
