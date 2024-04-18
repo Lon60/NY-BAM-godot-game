@@ -1,9 +1,9 @@
-CanvasGroup
 CollisionShape2D
 Area2D
-Control
-AnimatedSprite2D
 Timer
+AnimatedSprite2D
+CanvasGroup
+Control
 Container
 TextEdit
 Label

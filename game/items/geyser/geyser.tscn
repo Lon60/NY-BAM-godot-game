@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://ge3hgquee6vj"]
+
+[ext_resource type="Texture2D" uid="uid://cgrj8pwtrso7a" path="res://assets/pixel-adventure/Traps/Fire/Off.png" id="1_4bpt6"]
+[ext_resource type="Script" path="res://items/geyser/geyser.gd" id="1_tld2y"]
+[ext_resource type="Texture2D" uid="uid://by81kgvm8wrk0" path="res://assets/pixel-adventure/Traps/Fire/On (16x32).png" id="2_kxdti"]
+[ext_resource type="Texture2D" uid="uid://bd5aiev0ptal4" path="res://assets/fire.png" id="4_terxp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ostfh"]
+atlas = ExtResource("2_kxdti")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51563"]
+atlas = ExtResource("2_kxdti")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndksr"]
+atlas = ExtResource("2_kxdti")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_obuu6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4bpt6")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ostfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51563")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndksr")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3326x"]
+size = Vector2(198, 21)
+
+[node name="Geyser" type="Node2D"]
+script = ExtResource("1_tld2y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -1.5708
+sprite_frames = SubResource("SpriteFrames_obuu6")
+animation = &"off"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-8, 1)
+emitting = false
+amount = 50
+randomness = 0.1
+texture = ExtResource("4_terxp")
+emission_shape = 2
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(-580, 0)
+scale_amount_min = 0.0
+scale_amount_max = 0.05
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-115, 1.5)
+shape = SubResource("RectangleShape2D_3326x")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

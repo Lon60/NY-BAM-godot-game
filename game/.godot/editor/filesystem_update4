@@ -27,3 +27,5 @@ res://items/bouncePad/bouncePad.gd
 res://levels/level3/level3.gd
 res://items/spike/spike.tscn
 res://items/spike/spike.gd
+res://items/geyser/geyser.tscn
+res://items/geyser/geyser.gd
