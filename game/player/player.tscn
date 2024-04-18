@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://du81omnego2kp"]
+[gd_scene load_steps=50 format=3 uid="uid://du81omnego2kp"]
 
 [ext_resource type="Texture2D" uid="uid://mf4pq2614rwo" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Fall (32x32).png" id="1_bdcph"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_hgwe2"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dodj01mkpxxy7" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Jump (32x32).png" id="3_leen6"]
 [ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="6_4ka3e"]
 [ext_resource type="Texture2D" uid="uid://u7h0qtobbmes" path="res://assets/pixel-adventure/Terrain/Terrain (16x16).png" id="7_ebtyo"]
+[ext_resource type="Shader" path="res://assets/irisShot.gdshader" id="9_ysbbp"]
+[ext_resource type="Texture2D" uid="uid://cmq4svv6hi4jq" path="res://assets/white.png" id="10_r7uif"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_po24l"]
 size = Vector2(25, 28)
@@ -695,6 +697,62 @@ texture = ExtResource("7_ebtyo")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5a2j3")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7exec"]
+shader = ExtResource("9_ysbbp")
+shader_parameter/radius = 1.2
+
+[sub_resource type="Animation" id="Animation_u67ui"]
+resource_name = "IrisIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.2, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gi3hh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2]
+}
+
+[sub_resource type="Animation" id="Animation_o4i1f"]
+resource_name = "IrisOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n7lxt"]
+_data = {
+"IrisIn": SubResource("Animation_u67ui"),
+"IrisOut": SubResource("Animation_o4i1f"),
+"RESET": SubResource("Animation_gi3hh")
+}
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_hgwe2")
 
@@ -740,5 +798,16 @@ expand_icon = true
 tile_set = SubResource("TileSet_ha74p")
 format = 2
 layer_0/tile_data = PackedInt32Array(65521, 131072, 1, 131057, 131072, 1, 196593, 131072, 1, 262129, 131072, 1, 327665, 131072, 1, 393201, 131072, 1, 458737, 131072, 1, -393231, 131072, 1, -327695, 131072, 1, -262159, 131072, 1, -196623, 131072, 1, -131087, 131072, 1, -65551, 131072, 1, -15, 131072, 1, -393202, 0, 1, -327666, 0, 1, -262130, 0, 1, -196594, 0, 1, -131058, 0, 1, -65522, 0, 1, 14, 0, 1, 65550, 0, 1, 131086, 0, 1, 196622, 0, 1, 262158, 0, 1, 327694, 0, 1, 393230, 0, 1, -458738, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_7exec")
+position = Vector2(1.52588e-05, 2)
+scale = Vector2(2.78039, 1.90404)
+texture = ExtResource("10_r7uif")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n7lxt")
+}
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]

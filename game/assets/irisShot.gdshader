@@ -1,21 +1,26 @@
 shader_type canvas_item;
 
-uniform float radius: hint_range(0.0, 1.0) = 0.5;
+uniform float radius : hint_range(0.0, 1.20) = 0.5;
 
 void fragment() {
-    // Zentrum des Bildschirms festlegen
     vec2 center = vec2(0.5, 0.5);
-
-    // Berechne UV-Koordinaten relativ zum Bildschirm
     vec2 uv = SCREEN_UV;
 
-    // Berechne die Distanz vom aktuellen Punkt zum Zentrum
-    float dist = distance(uv, center);
+    float aspect_ratio = float(SCREEN_PIXEL_SIZE.y) / float(SCREEN_PIXEL_SIZE.x);
+    vec2 scaled_uv = uv;
 
-    // Entscheide, welche Farbe basierend auf der Distanz gezeichnet werden soll
-    if (dist < radius) {
-        COLOR = vec4(0.0, 0.0, 0.0, 0.0);  // Innerhalb des Kreises: Transparent
+    if (aspect_ratio > 1.0) {
+        scaled_uv.x = uv.x * aspect_ratio + (1.0 - aspect_ratio) * 0.5;
     } else {
-        COLOR = vec4(0.0, 0.0, 0.0, 1.0);  // Außerhalb des Kreises: Schwarz
+        float inverse_aspect = 1.0 / aspect_ratio;
+        scaled_uv.y = uv.y * inverse_aspect + (1.0 - inverse_aspect) * 0.5;
+    }
+
+    float dist = distance(scaled_uv, center);
+
+    if (dist < radius) {
+        COLOR = vec4(0.0, 0.0, 0.0, 0.0);
+    } else {
+        COLOR = vec4(0.0, 0.0, 0.0, 1.0);
     }
 }

@@ -10,5 +10,9 @@ func _process(delta):
 
 func _on_cave_entry_body_entered(body):
 	if body && body.is_in_group("player"):
+		body.playIrisIn()
+		await get_tree().create_timer(1).timeout
 		body.position = cave_spawn_point.position
+		await get_tree().create_timer(0.5).timeout
+		body.playIrisOut()
 

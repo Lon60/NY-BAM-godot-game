@@ -7,8 +7,10 @@ var dead: bool = false
 var animPlaySpecial = false
 
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player = $AnimationPlayer
 var deathScreen: String = "res://menu/deathScreen/deathScreen.tscn"
 var levelMenu: String = "res://menu/levelMenu/levelMenu.tscn"
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -60,3 +62,8 @@ func _physics_process(delta):
 
 func _on_back_btn_pressed():
 	SceneSwitcher.switch_scene(levelMenu)
+
+func playIrisIn():
+	animation_player.play("IrisIn")
+func playIrisOut():
+	animation_player.play("IrisOut")
