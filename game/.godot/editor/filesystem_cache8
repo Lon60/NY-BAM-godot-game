@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713442295
+::res://::1713444635
 global_controller.gd::GDScript::-1::1713347051::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::5422186716517332035::1713188405::1713188430::1::::<><>::
 scene_switcher.gd::GDScript::-1::1713337927::0::1::::<>Node<>::
-::res://assets/::1713442273
-bg2.gdshader::Shader::-1::1713442273::0::1::::<><>::
-bg.gdshader::Shader::-1::1713442273::0::1::::<><>::
-irisShot.gdshader::Shader::-1::1713442273::0::1::::<><>::
+::res://assets/::1713444620
+bg2.gdshader::Shader::-1::1713444620::0::1::::<><>::
+bg.gdshader::Shader::-1::1713444620::0::1::::<><>::
+irisShot.gdshader::Shader::-1::1713444620::0::1::::<><>::
 white.png::CompressedTexture2D::5649931609037509254::1713364963::1713364963::1::::<><>::
 ::res://assets/cave/::1713347641
 01 bg.png::CompressedTexture2D::3759637953753159067::1713343110::1713343256::1::::<><>::
@@ -26,7 +26,7 @@ Spikes.png::CompressedTexture2D::2107489273012861912::1685670077::1713423979::1:
 Tiles.png::CompressedTexture2D::7932707894253968815::1685670268::1713423979::1::::<><>::
 Vine_1.png::CompressedTexture2D::5012515957535270049::1685670315::1713423979::1::::<><>::
 Water.png::CompressedTexture2D::4292903740668908250::1685670559::1713423979::1::::<><>::
-::res://assets/jungle-pack/::1713442295
+::res://assets/jungle-pack/::1713442301
 info.txt::TextFile::-1::1713441980::0::1::::<><>::
 jungle tileset.png::CompressedTexture2D::1368619614133363516::1713441783::1713442297::1::::<><>::
 ::res://assets/jungle-pack/Chacter with outline/::1713442011
@@ -35,7 +35,6 @@ landing outline.png::CompressedTexture2D::4248800548454992966::1713441781::17134
 ::res://assets/jungle-pack/Character/::1713442011
 jump.png::CompressedTexture2D::9024804781752552297::1713441783::1713442011::1::::<><>::
 landing.png::CompressedTexture2D::266515900741754500::1713441783::1713442011::1::::<><>::
-::res://assets/jungle-pack/jungle tileset/::1713442295
 ::res://assets/jungle-pack/parallax background/::1713442011
 plx-1.png::CompressedTexture2D::1184112354664599563::1713441784::1713442011::1::::<><>::
 plx-2.png::CompressedTexture2D::7609113905331485023::1713441784::1713442011::1::::<><>::
@@ -372,13 +371,16 @@ BG3.png::CompressedTexture2D::8497795917081626000::1713440255::1713440443::1::::
 Decors.png::CompressedTexture2D::4026800836515778102::1713440255::1713440443::1::::<><>::
 info.txt::TextFile::-1::1713440333::0::1::::<><>::
 Tileset.png::CompressedTexture2D::7175702391531366771::1713440256::1713440443::1::::<><>::
-::res://items/::1713442188
-::res://items/caveTrap/::1713442273
+::res://items/::1713444626
+::res://items/caveTrap/::1713444620
 caveTrap.gd::GDScript::-1::1713422463::0::1::::<>RigidBody2D<>::
-caveTrap.tscn::PackedScene::6384391232212959202::1713442273::0::1::::<><>::res://items/caveTrap/caveTrap.gd<>uid://7w5gslgyhjne::::res://assets/pixel-adventure/Traps/Spikes/Idle.png
+caveTrap.tscn::PackedScene::6384391232212959202::1713444620::0::1::::<><>::res://items/caveTrap/caveTrap.gd<>uid://7w5gslgyhjne::::res://assets/pixel-adventure/Traps/Spikes/Idle.png
 ::res://items/fan/::1713441258
 fan.gd::GDScript::-1::1713439589::0::1::::<>Area2D<>::
 fan.tscn::PackedScene::3963281817661612359::1713441258::0::1::::<><>::uid://c6ues4yswq3ie::::res://assets/pixel-adventure/Traps/Fan/On (24x8).png<>res://items/fan/fan.gd<>uid://bl0f130y5e4wu::::res://assets/pixel-adventure/Traps/Sand Mud Ice/Ice Particle.png
+::res://items/fan2/::1713444635
+fan2.tscn::PackedScene::482320956957149599::1713444626::0::1::::<><>::res://items/fan/fan.gd<>uid://c6ues4yswq3ie::::res://assets/pixel-adventure/Traps/Fan/On (24x8).png<>uid://bl0f130y5e4wu::::res://assets/pixel-adventure/Traps/Sand Mud Ice/Ice Particle.png
+fan.gd::GDScript::-1::1713444626::0::1::::<>Area2D<>::
 ::res://items/finish/::1713441257
 finish.gd::GDScript::-1::1713335484::0::1::::<>Area2D<>::
 finish.tscn::PackedScene::6958735359905268788::1713441257::0::1::::<><>::res://items/finish/finish.gd<>uid://cqfkk8tn0k0mt::::res://assets/pixel-adventure/Items/Checkpoints/End/End (Pressed) (64x64).png
@@ -392,18 +394,18 @@ level1.tscn::PackedScene::4893684516553355494::1713441257::0::1::::<><>::res://l
 ::res://levels/level2/::1713442202
 level2.gd::GDScript::-1::1713426127::0::1::::<>Node2D<>::
 level2.tscn::PackedScene::4926925850745803417::1713442202::0::1::::<><>::res://levels/level2/level2.gd<>res://assets/bg.gdshader<>uid://sarcrp3owy87::::res://assets/cave/03 water.png<>uid://u7h0qtobbmes::::res://assets/pixel-adventure/Terrain/Terrain (16x16).png<>uid://dw1mutcjjdg7b::::res://assets/cave/05 rocksfront.png<>uid://bqj2sgkjbc4pe::::res://assets/pixel-adventure/Background/Yellow.png<>uid://du81omnego2kp::::res://player/player.tscn<>uid://bfscns4n5ny7e::::res://assets/cave-tileset-free/Background.png<>uid://c6e4mca460a0k::::res://items/finish/finish.tscn<>uid://sl11chhxyb02::::res://assets/cave/tilesetcave.png<>uid://dlawsmjsr4top::::res://assets/cave-tileset-free/Tiles.png<>uid://dfo1d7ps8k1vl::::res://assets/rockscavetree/rockscavetree.png<>uid://cw7v8xnk4oe15::::res://items/caveTrap/caveTrap.tscn<>uid://cdodn10dlvv7v::::res://assets/cave-tileset-free/Vine_1.png<>uid://bwc3rj45g3i6n::::res://assets/pixel-art-cave-objects/Cave_objects_source.png<>uid://b2frq6ad4fm0a::::res://assets/cave-tileset-free/Water.png
-::res://levels/level3/::1713442250
+::res://levels/level3/::1713444527
 level3.gd::GDScript::-1::1713337734::0::1::::<>Node2D<>::
-level3.tscn::PackedScene::2239102542480052844::1713442250::0::1::::<><>::res://assets/bg.gdshader<>res://levels/level3/level3.gd<>uid://nnlwtl7vvqx3::::res://assets/pixel-adventure/Background/Brown.png<>uid://u7h0qtobbmes::::res://assets/pixel-adventure/Terrain/Terrain (16x16).png<>uid://du81omnego2kp::::res://player/player.tscn<>uid://c6e4mca460a0k::::res://items/finish/finish.tscn
+level3.tscn::PackedScene::2239102542480052844::1713444527::0::1::::<><>::res://levels/level3/level3.gd<>uid://q4ufmbuwjw3t::::res://assets/jungle-pack/parallax background/plx-1.png<>uid://u7h0qtobbmes::::res://assets/pixel-adventure/Terrain/Terrain (16x16).png<>uid://du81omnego2kp::::res://player/player.tscn<>uid://dgn582otn0jyt::::res://assets/jungle-pack/parallax background/plx-2.png<>uid://tq772v1oxyf1::::res://assets/jungle-pack/jungle tileset.png<>uid://cu1rofy2cmd4y::::res://assets/jungle-pack/parallax background/plx-3.png<>uid://c6e4mca460a0k::::res://items/finish/finish.tscn<>uid://fn3b00ll1d5::::res://assets/jungle-pack/parallax background/plx-4.png<>uid://dn61a8m3tqcug::::res://assets/jungle-pack/parallax background/plx-5.png
 ::res://menu/::1713441257
 mainMenu.gd::GDScript::-1::1713432499::0::1::::<>Node2D<>::
 mainMenu.tscn::PackedScene::5667794500673400195::1713441257::0::1::::<><>::res://menu/mainMenu.gd<>res://assets/bg2.gdshader<>uid://bdpu1p0vjxp84::::res://assets/pixel-adventure/Background/Blue.png<>uid://u6ffipvnqqce::::res://assets/pixel-adventure/Menu/Buttons/Play.png<>uid://c2ovflm8degad::::res://assets/pixel-adventure/Menu/Buttons/Settings.png<>uid://bv2vqrus4e0r2::::res://assets/pixel-adventure/Menu/Buttons/Close.png
 ::res://menu/deathScreen/::1713338013
 deathScreen.gd::GDScript::-1::1713338013::0::1::::<>Node2D<>::
 deathScreen.tscn::PackedScene::4091573607441040686::1713337681::0::1::::<><>::res://menu/deathScreen/deathScreen.gd<>res://assets/bg2.gdshader<>uid://dlq1r4fx753b2::::res://assets/pixel-adventure/Background/Pink.png
-::res://menu/levelMenu/::1713434376
-levelMenu.gd::GDScript::-1::1713338103::0::1::::<>Node2D<>::
-levelMenu.tscn::PackedScene::187647845868696611::1713434376::0::1::::<><>::res://menu/levelMenu/levelMenu.gd<>res://assets/bg2.gdshader<>uid://bdpu1p0vjxp84::::res://assets/pixel-adventure/Background/Blue.png<>uid://dc6fwomdfrn0l::::res://assets/pixel-adventure/Menu/Levels/01.png<>uid://v8edwr7y5gt::::res://assets/pixel-adventure/Menu/Buttons/Back.png<>uid://c5m61pkqt6ecp::::res://assets/pixel-adventure/Menu/Levels/locked.png
+::res://menu/levelMenu/::1713444528
+levelMenu.gd::GDScript::-1::1713444399::0::1::::<>Node2D<>::
+levelMenu.tscn::PackedScene::187647845868696611::1713444528::0::1::::<><>::res://menu/levelMenu/levelMenu.gd<>res://assets/bg2.gdshader<>uid://bdpu1p0vjxp84::::res://assets/pixel-adventure/Background/Blue.png<>uid://dc6fwomdfrn0l::::res://assets/pixel-adventure/Menu/Levels/01.png<>uid://v8edwr7y5gt::::res://assets/pixel-adventure/Menu/Buttons/Back.png<>uid://cdcj4mmabo170::::res://assets/pixel-adventure/Menu/Levels/02.png<>uid://c5m61pkqt6ecp::::res://assets/pixel-adventure/Menu/Levels/locked.png
 ::res://menu/settings/::1713434744
 settings.gd::GDScript::-1::1713434371::0::1::::<>Node2D<>::
 settings.tscn::PackedScene::1166304460632064770::1713434744::0::1::::<><>::res://assets/bg2.gdshader<>res://menu/settings/settings.gd<>uid://bdpu1p0vjxp84::::res://assets/pixel-adventure/Background/Blue.png<>uid://v8edwr7y5gt::::res://assets/pixel-adventure/Menu/Buttons/Back.png

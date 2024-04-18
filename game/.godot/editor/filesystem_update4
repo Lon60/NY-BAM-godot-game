@@ -20,3 +20,5 @@ res://items/fan/fan.gd
 res://levels/level3/level3.tscn
 res://items/caveTrap/caveTrap.tscn
 res://menu/levelMenu/levelMenu.gd
+res://items/fan2/fan2.tscn
+res://items/fan2/fan2.gd

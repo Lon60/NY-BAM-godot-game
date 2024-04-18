@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://g4v0xt055kcd"]
+
+[ext_resource type="Script" path="res://items/fan2/fan2.gd" id="1_c2ipi"]
+[ext_resource type="Texture2D" uid="uid://c6ues4yswq3ie" path="res://assets/pixel-adventure/Traps/Fan/On (24x8).png" id="2_67ny2"]
+[ext_resource type="Texture2D" uid="uid://bl0f130y5e4wu" path="res://assets/pixel-adventure/Traps/Sand Mud Ice/Ice Particle.png" id="3_h3qj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0xxg"]
+atlas = ExtResource("2_67ny2")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daty4"]
+atlas = ExtResource("2_67ny2")
+region = Rect2(24, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fffh0"]
+atlas = ExtResource("2_67ny2")
+region = Rect2(48, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16f6a"]
+atlas = ExtResource("2_67ny2")
+region = Rect2(72, 0, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enlbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0xxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daty4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fffh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16f6a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8kob"]
+size = Vector2(24.1537, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4aha"]
+size = Vector2(20, 153.296)
+
+[node name="Fan" type="Area2D"]
+script = ExtResource("1_c2ipi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 0)
+rotation = -0.820305
+sprite_frames = SubResource("SpriteFrames_enlbx")
+animation = &"idle"
+frame_progress = 0.292901
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.82416, -0.727998)
+rotation = -0.820305
+shape = SubResource("RectangleShape2D_k8kob")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-7, -6)
+amount = 30
+explosiveness = 0.5
+randomness = 0.1
+texture = ExtResource("3_h3qj3")
+emission_shape = 2
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(-300, -280)
+scale_amount_min = 0.2
+
+[node name="PlayerDedect" type="Area2D" parent="."]
+position = Vector2(14, -18)
+gravity = -980.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDedect"]
+position = Vector2(-81, -45)
+rotation = -0.820305
+shape = SubResource("RectangleShape2D_a4aha")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="body_entered" from="PlayerDedect" to="." method="_on_player_dedect_body_entered"]
+[connection signal="body_exited" from="PlayerDedect" to="." method="_on_player_dedect_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
