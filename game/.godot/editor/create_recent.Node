@@ -1,8 +1,8 @@
+CanvasGroup
 CollisionShape2D
 Area2D
 Control
 AnimatedSprite2D
-CanvasGroup
 Timer
 Container
 TextEdit
