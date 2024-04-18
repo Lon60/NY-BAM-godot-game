@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://menu/settings/settings.gd" id="1_nj8j6"]
 [ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="2_5mu2b"]
 [ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="3_knvxs"]
-[ext_resource type="Texture2D" uid="uid://c5m61pkqt6ecp" path="res://assets/pixel-adventure/Menu/Levels/locked.png" id="5_qfks4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eyx24"]
 shader = ExtResource("1_2ijo3")
@@ -16,6 +15,9 @@ font_names = PackedStringArray("Press Start 2P")
 font_names = PackedStringArray("Press Start 2P")
 
 [sub_resource type="SystemFont" id="SystemFont_a51ie"]
+font_names = PackedStringArray("Press Start 2P")
+
+[sub_resource type="SystemFont" id="SystemFont_3oyix"]
 font_names = PackedStringArray("Press Start 2P")
 
 [node name="Settings" type="Node2D"]
@@ -98,18 +100,20 @@ layout_mode = 2
 [node name="lvl2Btn" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_3oyix")
+theme_override_font_sizes/font_size = 28
 disabled = true
-icon = ExtResource("5_qfks4")
-flat = true
+text = "Placeholder"
 icon_alignment = 1
 expand_icon = true
 
 [node name="lvl3Btn" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_3oyix")
+theme_override_font_sizes/font_size = 28
 disabled = true
-icon = ExtResource("5_qfks4")
-flat = true
+text = "Placeholder"
 icon_alignment = 1
 expand_icon = true
 
