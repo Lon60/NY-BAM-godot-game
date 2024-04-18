@@ -1,3 +1,6 @@
+TextEdit
+Label
+HBoxContainer
 CollisionShape2D
 Area2D
 CanvasGroup
@@ -10,5 +13,3 @@ CanvasLayer
 RigidBody2D
 CPUParticles2D
 Node2D
-ShapeCast2D
-Node

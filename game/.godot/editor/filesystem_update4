@@ -10,3 +10,7 @@ res://levels/level2/level2.gd
 res://items/caveStrap/caveStrap.gd
 res://menu/mainMenu.tscn
 res://menu/mainMenu.gd
+res://menu/settings/settings.tscn
+res://levels/level1/level1.tscn
+res://menu/levelMenu/levelMenu.tscn
+res://menu/settings/settings.gd

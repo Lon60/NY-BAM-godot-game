@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://qu74m4kmq331"]
+
+[ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_2ijo3"]
+[ext_resource type="Script" path="res://menu/settings/settings.gd" id="1_nj8j6"]
+[ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="2_5mu2b"]
+[ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="3_knvxs"]
+[ext_resource type="Texture2D" uid="uid://c5m61pkqt6ecp" path="res://assets/pixel-adventure/Menu/Levels/locked.png" id="5_qfks4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eyx24"]
+shader = ExtResource("1_2ijo3")
+
+[sub_resource type="SystemFont" id="SystemFont_b3uy7"]
+font_names = PackedStringArray("Press Start 2P")
+
+[sub_resource type="SystemFont" id="SystemFont_ye4kl"]
+font_names = PackedStringArray("Press Start 2P")
+
+[sub_resource type="SystemFont" id="SystemFont_a51ie"]
+font_names = PackedStringArray("Press Start 2P")
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_nj8j6")
+
+[node name="background" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_eyx24")
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_5mu2b")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 33
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 250
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="backBtn" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+icon = ExtResource("3_knvxs")
+flat = true
+expand_icon = true
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.686275, 0.627451, 0.521569, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_b3uy7")
+theme_override_font_sizes/font_size = 64
+text = "Settings"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 28
+text = "Max FPS:"
+
+[node name="fpsEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_a51ie")
+theme_override_font_sizes/font_size = 24
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="lvl2Btn" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+disabled = true
+icon = ExtResource("5_qfks4")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="lvl3Btn" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+disabled = true
+icon = ExtResource("5_qfks4")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainer/fpsEdit" to="." method="_on_fps_edit_text_changed"]
