@@ -17,3 +17,5 @@ res://menu/settings/settings.gd
 res://items/finish/finish.tscn
 res://items/fan/fan.tscn
 res://items/fan/fan.gd
+res://levels/level3/level3.tscn
+res://items/caveTrap/caveTrap.tscn

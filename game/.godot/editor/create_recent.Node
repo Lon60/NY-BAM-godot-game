@@ -1,9 +1,11 @@
+Control
+Container
+CanvasGroup
 TextEdit
 Label
 HBoxContainer
 CollisionShape2D
 Area2D
-CanvasGroup
 AnimatedSprite2D
 TextureRect
 Marker2D
@@ -11,5 +13,3 @@ AnimationPlayer
 Sprite2D
 CanvasLayer
 RigidBody2D
-CPUParticles2D
-Node2D

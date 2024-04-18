@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://sl11chhxyb02" path="res://assets/cave/tilesetcave.png" id="7_18o3g"]
 [ext_resource type="Texture2D" uid="uid://dlawsmjsr4top" path="res://assets/cave-tileset-free/Tiles.png" id="10_11xxt"]
 [ext_resource type="Texture2D" uid="uid://dfo1d7ps8k1vl" path="res://assets/rockscavetree/rockscavetree.png" id="10_48sm1"]
-[ext_resource type="PackedScene" uid="uid://cw7v8xnk4oe15" path="res://items/caveStrap/caveStrap.tscn" id="12_3dkj2"]
+[ext_resource type="PackedScene" uid="uid://cw7v8xnk4oe15" path="res://items/caveTrap/caveTrap.tscn" id="12_3dkj2"]
 [ext_resource type="Texture2D" uid="uid://cdodn10dlvv7v" path="res://assets/cave-tileset-free/Vine_1.png" id="12_g0ubk"]
 [ext_resource type="Texture2D" uid="uid://bwc3rj45g3i6n" path="res://assets/pixel-art-cave-objects/Cave_objects_source.png" id="13_kbe0k"]
 [ext_resource type="Texture2D" uid="uid://b2frq6ad4fm0a" path="res://assets/cave-tileset-free/Water.png" id="14_gvc5a"]
