@@ -13,7 +13,7 @@ width = 5
 size = Vector2(11, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3fop"]
-size = Vector2(20, 120)
+size = Vector2(207, 225)
 
 [node name="CaveTrap" type="RigidBody2D"]
 freeze = true
@@ -45,7 +45,7 @@ flip_v = true
 [node name="Dedect" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dedect"]
-position = Vector2(-78, 60)
+position = Vector2(-0.5, 112.5)
 shape = SubResource("RectangleShape2D_r3fop")
 
 [node name="CaveTrap_" type="Area2D" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb8vaxog1jr33"
-path="res://.godot/imported/BG2.png-07d45fdb0eb6a02919cb293ac3fd06d4.ctex"
+uid="uid://dah71gej1pq1h"
+path="res://.godot/imported/Tileset.png-82b4c7cf0afb505b15735285be63a76f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FreeCuteTileset/BG2.png"
-dest_files=["res://.godot/imported/BG2.png-07d45fdb0eb6a02919cb293ac3fd06d4.ctex"]
+source_file="res://assets/tileset-cute-forest/Tileset.png"
+dest_files=["res://.godot/imported/Tileset.png-82b4c7cf0afb505b15735285be63a76f.ctex"]
 
 [params]
 
