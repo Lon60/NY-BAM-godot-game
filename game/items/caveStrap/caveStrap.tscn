@@ -10,7 +10,7 @@ gradient = SubResource("Gradient_41r8s")
 width = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0r1b7"]
-size = Vector2(15, 49)
+size = Vector2(11, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3fop"]
 size = Vector2(20, 120)
@@ -51,7 +51,7 @@ shape = SubResource("RectangleShape2D_r3fop")
 [node name="CaveTrap_" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CaveTrap_"]
-position = Vector2(0, 20)
+position = Vector2(-0.5, 20.5)
 shape = SubResource("RectangleShape2D_0r1b7")
 
 [connection signal="body_entered" from="Dedect" to="." method="_on_dedect_body_entered"]

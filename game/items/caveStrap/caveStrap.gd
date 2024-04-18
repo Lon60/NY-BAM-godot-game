@@ -3,6 +3,7 @@ extends RigidBody2D
 @onready var cave_trap: RigidBody2D = $"."
 @onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
 @onready var png = $png
+@onready var cave_trap_ = $CaveTrap_
 
 
 var playerDetected: bool = false
@@ -25,5 +26,6 @@ func despawn():
 	cpu_particles_2d.emitting = true
 	await get_tree().create_timer(0.2).timeout
 	png.visible = false
+	cave_trap_.monitoring = false
 	await get_tree().create_timer(0.55).timeout
 	queue_free()

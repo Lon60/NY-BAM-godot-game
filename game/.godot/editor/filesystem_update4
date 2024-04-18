@@ -7,3 +7,4 @@ res://player/player.tscn
 res://items/caveStrap/caveStrap.tscn
 res://player/player.gd
 res://levels/level2/level2.gd
+res://items/caveStrap/caveStrap.gd
