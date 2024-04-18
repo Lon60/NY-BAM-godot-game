@@ -54,7 +54,6 @@ sprite_frames = SubResource("SpriteFrames_obuu6")
 animation = &"off"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
 autostart = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]

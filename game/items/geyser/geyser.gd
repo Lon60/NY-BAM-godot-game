@@ -4,12 +4,17 @@ extends Node2D
 @onready var cpu_particles_2d = $CPUParticles2D
 
 var on = false
+var count = 1
 
 func _on_timer_timeout():
 	if on:
 		cpu_particles_2d.emitting = false
 		animated_sprite_2d.play("off")
-		
+		count += 1
+		if count == 5:
+			on = false
+		else:
+			on = true
 	else:
 		cpu_particles_2d.emitting = true
 		animated_sprite_2d.play("on")
