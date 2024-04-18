@@ -15,3 +15,5 @@ res://levels/level1/level1.tscn
 res://menu/levelMenu/levelMenu.tscn
 res://menu/settings/settings.gd
 res://items/finish/finish.tscn
+res://items/fan/fan.tscn
+res://items/fan/fan.gd

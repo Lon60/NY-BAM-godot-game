@@ -4,7 +4,7 @@ var player:CharacterBody2D = null
 
 func _process(delta):
 	if player:
-		player.velocity.y -= 30
+		player.velocity.y -= 50
 
 
 func _on_player_dedect_body_entered(body):

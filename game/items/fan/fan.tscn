@@ -41,39 +41,45 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8kob"]
-size = Vector2(25, 12)
+size = Vector2(24.1537, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a4aha"]
-size = Vector2(20, 145)
+size = Vector2(20, 153.296)
 
 [node name="Fan" type="Area2D"]
 script = ExtResource("1_gdb1m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 0.698132
 sprite_frames = SubResource("SpriteFrames_enlbx")
 animation = &"idle"
 frame_progress = 0.292901
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1)
+position = Vector2(0.82416, -0.727998)
+rotation = 0.698132
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_k8kob")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(8, -8)
 amount = 30
 randomness = 0.1
 texture = ExtResource("2_om0vf")
 emission_shape = 2
 emission_sphere_radius = 5.0
 spread = 180.0
-gravity = Vector2(0, -280)
+gravity = Vector2(230, -280)
 scale_amount_min = 0.2
 
 [node name="PlayerDedect" type="Area2D" parent="."]
+position = Vector2(14, -18)
 gravity = -980.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDedect"]
-position = Vector2(0, -74.5)
+position = Vector2(41.6664, -47.1777)
+rotation = 0.698132
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a4aha")
 
 [connection signal="body_entered" from="PlayerDedect" to="." method="_on_player_dedect_body_entered"]
