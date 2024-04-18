@@ -22,3 +22,5 @@ res://items/caveTrap/caveTrap.tscn
 res://menu/levelMenu/levelMenu.gd
 res://items/fan2/fan2.tscn
 res://items/fan2/fan2.gd
+res://items/bouncePad/bouncePad.tscn
+res://items/bouncePad/bouncePad.gd
