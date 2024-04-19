@@ -44,65 +44,54 @@ expand_icon = true
 layout_mode = 2
 alignment = 1
 
-[node name="Level 1" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/Level 1"]
+[node name="Level1" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(380, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_k7qcr")
 
-[node name="lvl1Btn" type="Button" parent="MarginContainer/HBoxContainer/Level 1/PanelContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="Level1" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level1"]
 layout_mode = 2
-flat = true
-icon_alignment = 1
-expand_icon = true
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 1/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Level1/Level1"]
+layout_mode = 2
+theme_override_constants/margin_top = 120
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level1/Level1/MarginContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_1o0np")
 theme_override_font_sizes/font_size = 28
 text = "Tutorial"
 horizontal_alignment = 1
 
-[node name="Level 2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="lvl1Btn" type="Button" parent="MarginContainer/HBoxContainer/Level1"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-alignment = 1
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/Level 2"]
+[node name="Level2" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(380, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_tr7n4")
 
-[node name="lvl2Btn" type="Button" parent="MarginContainer/HBoxContainer/Level 2/PanelContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="Level2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level2"]
 layout_mode = 2
-disabled = true
-flat = true
-icon_alignment = 1
-expand_icon = true
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 2/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Level2/Level2"]
+layout_mode = 2
+theme_override_constants/margin_top = 120
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level2/Level2/MarginContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_1o0np")
 theme_override_font_sizes/font_size = 28
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="Level 3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/Level 3"]
-custom_minimum_size = Vector2(380, 0)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_1udyn")
-
-[node name="lvl3Btn" type="Button" parent="MarginContainer/HBoxContainer/Level 3/PanelContainer"]
+[node name="lvl2Btn" type="Button" parent="MarginContainer/HBoxContainer/Level2"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 disabled = true
@@ -110,7 +99,20 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 3/PanelContainer"]
+[node name="Level3" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_1udyn")
+
+[node name="Level3" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Level3/Level3"]
+layout_mode = 2
+theme_override_constants/margin_top = 120
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level3/Level3/MarginContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_1o0np")
 theme_override_font_sizes/font_size = 28
@@ -119,7 +121,15 @@ impossible
 "
 horizontal_alignment = 1
 
+[node name="lvl3Btn" type="Button" parent="MarginContainer/HBoxContainer/Level3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+disabled = true
+flat = true
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="pressed" from="MarginContainer/backBtn" to="." method="_on_back_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 1/PanelContainer/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 2/PanelContainer/lvl2Btn" to="." method="_on_lvl_2_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 3/PanelContainer/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Level1/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Level2/lvl2Btn" to="." method="_on_lvl_2_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Level3/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]

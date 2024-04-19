@@ -12,4 +12,3 @@ StaticBody2D
 CanvasGroup
 TextureRect
 AnimatedSprite2D
-Area2D
