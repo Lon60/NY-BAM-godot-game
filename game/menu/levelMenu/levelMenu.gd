@@ -5,9 +5,13 @@ var lvl2: String = GlobalController.lvl2
 var lvl3: String = GlobalController.lvl3
 var mainMenu: String = "res://menu/mainMenu.tscn"
 
-@onready var lvl_1_btn = $MarginContainer/HBoxContainer/Level1/lvl1Btn
-@onready var lvl_2_btn = $MarginContainer/HBoxContainer/Level2/lvl2Btn
-@onready var lvl_3_btn = $MarginContainer/HBoxContainer/Level3/lvl3Btn
+@onready var lvl_1_btn: Button = $MarginContainer/HBoxContainer/Level1/lvl1Btn
+@onready var lvl_2_btn: Button = $MarginContainer/HBoxContainer/Level2/lvl2Btn
+@onready var lvl_3_btn: Button = $MarginContainer/HBoxContainer/Level3/lvl3Btn
+
+@onready var level_1: Control = $MarginContainer/HBoxContainer/Level1
+@onready var level_2: Control = $MarginContainer/HBoxContainer/Level2
+@onready var level_3: Control = $MarginContainer/HBoxContainer/Level3
 
 
 func _process(delta):
@@ -30,3 +34,15 @@ func _on_lvl_3_btn_pressed():
 
 func _on_back_btn_pressed():
 	SceneSwitcher.switch_scene(mainMenu)
+
+
+# --- visual effects ---
+func _on_lvl_1_btn_mouse_entered():
+	level_1.custom_minimum_size.x = 500
+	level_2.custom_minimum_size.x = 320
+	level_3.custom_minimum_size.x = 320
+func _on_lvl_1_btn_mouse_exited():
+	level_1.custom_minimum_size.x = 380
+	level_2.custom_minimum_size.x = 380
+	level_3.custom_minimum_size.x = 380
+

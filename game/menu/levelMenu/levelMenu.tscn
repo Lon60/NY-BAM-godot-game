@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cw5sdxsiyjux"]
+[gd_scene load_steps=14 format=3 uid="uid://cw5sdxsiyjux"]
 
 [ext_resource type="Script" path="res://menu/levelMenu/levelMenu.gd" id="1_3q0ay"]
 [ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="4_wd6w1"]
@@ -19,6 +19,130 @@ texture = ExtResource("6_rujvx")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1udyn"]
 texture = ExtResource("7_2yrx6")
+
+[sub_resource type="Animation" id="Animation_o7h8i"]
+resource_name = "lvl1_mouseEnter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Level1:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(380, 0), Vector2(500, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/HBoxContainer/Level2:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(380, 0), Vector2(320, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/Level3:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(380, 0), Vector2(320, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qb3e0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Level1:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(380, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/HBoxContainer/Level2:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(380, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/Level3:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(380, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4531a"]
+resource_name = "lvl1_mouseLeft"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Level1:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(500, 0), Vector2(380, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/HBoxContainer/Level2:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(320, 0), Vector2(380, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/Level3:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(320, 0), Vector2(320, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_54x5k"]
+_data = {
+"RESET": SubResource("Animation_qb3e0"),
+"lvl1_mouseEnter": SubResource("Animation_o7h8i"),
+"lvl1_mouseLeft": SubResource("Animation_4531a")
+}
 
 [node name="LevelMenu" type="Node2D"]
 script = ExtResource("1_3q0ay")
@@ -129,7 +253,14 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_54x5k")
+}
+
 [connection signal="pressed" from="MarginContainer/backBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/Level1/lvl1Btn" to="." method="_on_lvl_1_btn_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/Level1/lvl1Btn" to="." method="_on_lvl_1_btn_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Level1/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Level2/lvl2Btn" to="." method="_on_lvl_2_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Level3/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]
