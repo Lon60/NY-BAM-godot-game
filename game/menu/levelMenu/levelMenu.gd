@@ -7,7 +7,7 @@ var mainMenu: String = "res://menu/mainMenu.tscn"
 
 @onready var lvl_1_btn = $"MarginContainer/HBoxContainer/Level 1/PanelContainer/lvl1Btn"
 @onready var lvl_2_btn = $"MarginContainer/HBoxContainer/Level 2/PanelContainer/lvl2Btn"
-@onready var lvl_3_btn = $"MarginContainer/HBoxContainer/Level 3/lvl3Btn"
+@onready var lvl_3_btn = $"MarginContainer/HBoxContainer/Level 3/PanelContainer/lvl3Btn"
 
 
 

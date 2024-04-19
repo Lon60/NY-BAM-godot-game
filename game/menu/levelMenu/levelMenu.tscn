@@ -1,12 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cw5sdxsiyjux"]
+[gd_scene load_steps=13 format=3 uid="uid://cw5sdxsiyjux"]
 
 [ext_resource type="Script" path="res://menu/levelMenu/levelMenu.gd" id="1_3q0ay"]
 [ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_qiem8"]
 [ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="2_10h25"]
 [ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="4_wd6w1"]
 [ext_resource type="Texture2D" uid="uid://buwgcwwxpgfx" path="res://menu/levelMenu/level1.png" id="5_mrf5h"]
-[ext_resource type="Texture2D" uid="uid://c5m61pkqt6ecp" path="res://assets/pixel-adventure/Menu/Levels/locked.png" id="6_mrks2"]
 [ext_resource type="Texture2D" uid="uid://lh4mgnqsh1e8" path="res://menu/levelMenu/level2.png" id="6_rujvx"]
+[ext_resource type="Texture2D" uid="uid://dkd2wo4a8cx78" path="res://menu/levelMenu/level3.png" id="7_2yrx6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l7a38"]
 shader = ExtResource("1_qiem8")
@@ -21,6 +21,9 @@ font_names = PackedStringArray("Press Start 2P")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tr7n4"]
 texture = ExtResource("6_rujvx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1udyn"]
+texture = ExtResource("7_2yrx6")
 
 [node name="LevelMenu" type="Node2D"]
 script = ExtResource("1_3q0ay")
@@ -103,23 +106,34 @@ theme_override_font_sizes/font_size = 28
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-
 [node name="Level 3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="lvl3Btn" type="Button" parent="MarginContainer/HBoxContainer/Level 3"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/Level 3"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_1udyn")
+
+[node name="lvl3Btn" type="Button" parent="MarginContainer/HBoxContainer/Level 3/PanelContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 disabled = true
-icon = ExtResource("6_mrks2")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 3/PanelContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_1o0np")
+theme_override_font_sizes/font_size = 28
+text = "Level 3
+-
+(almost impossible)"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/backBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Level 1/PanelContainer/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Level 2/PanelContainer/lvl2Btn" to="." method="_on_lvl_2_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 3/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 3/PanelContainer/lvl3Btn" to="." method="_on_lvl_3_btn_pressed"]
