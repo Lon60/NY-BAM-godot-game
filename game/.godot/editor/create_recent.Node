@@ -1,6 +1,6 @@
-TileMap
 VBoxContainer
 HBoxContainer
+TileMap
 TextureRect
 AnimationPlayer
 AnimationTree
@@ -12,4 +12,3 @@ ColorRect
 Label
 CollisionPolygon2D
 CollisionShape2D
-StaticBody2D

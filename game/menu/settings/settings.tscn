@@ -1,12 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://qu74m4kmq331"]
+[gd_scene load_steps=7 format=3 uid="uid://qu74m4kmq331"]
 
-[ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_2ijo3"]
 [ext_resource type="Script" path="res://menu/settings/settings.gd" id="1_nj8j6"]
-[ext_resource type="Texture2D" uid="uid://bdpu1p0vjxp84" path="res://assets/pixel-adventure/Background/Blue.png" id="2_5mu2b"]
+[ext_resource type="Texture2D" uid="uid://bfscns4n5ny7e" path="res://assets/cave-tileset-free/Background.png" id="2_v2yrh"]
 [ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="3_knvxs"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_eyx24"]
-shader = ExtResource("1_2ijo3")
 
 [sub_resource type="SystemFont" id="SystemFont_b3uy7"]
 font_names = PackedStringArray("Press Start 2P")
@@ -17,17 +13,13 @@ font_names = PackedStringArray("Press Start 2P")
 [sub_resource type="SystemFont" id="SystemFont_a51ie"]
 font_names = PackedStringArray("Press Start 2P")
 
-[sub_resource type="SystemFont" id="SystemFont_3oyix"]
-font_names = PackedStringArray("Press Start 2P")
-
 [node name="Settings" type="Node2D"]
 script = ExtResource("1_nj8j6")
 
 [node name="background" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_eyx24")
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_5mu2b")
+texture = ExtResource("2_v2yrh")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -97,25 +89,97 @@ theme_override_font_sizes/font_size = 24
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="lvl2Btn" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_3oyix")
-theme_override_font_sizes/font_size = 28
-disabled = true
-text = "Placeholder"
-icon_alignment = 1
-expand_icon = true
+alignment = 1
 
-[node name="lvl3Btn" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_3oyix")
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 28
-disabled = true
-text = "Placeholder"
-icon_alignment = 1
-expand_icon = true
+text = "Asset Credits"
+horizontal_alignment = 1
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Cave (1/2) - Ludenc"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Cave (2/2) - 	The Pixel Nook"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Fire Animation - 	brullov"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Jungle Pack - 	Jesse Munguia"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Oak Woods - brullov"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Padlock - karsiori"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Pixel Adventure - Pixel Frog"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Cave Objects - craftpix"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Cave entrance & tree - snitran"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Cute Forest - 	aamatniekss"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainer/fpsEdit" to="." method="_on_fps_edit_text_changed"]
