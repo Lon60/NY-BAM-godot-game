@@ -5,9 +5,10 @@ var lvl2: String = GlobalController.lvl2
 var lvl3: String = GlobalController.lvl3
 var mainMenu: String = "res://menu/mainMenu.tscn"
 
-@onready var lvl_1_btn: Button = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl1Btn
-@onready var lvl_2_btn: Button = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl2Btn
-@onready var lvl_3_btn: Button = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/lvl3Btn
+@onready var lvl_1_btn = $"MarginContainer/HBoxContainer/Level 1/PanelContainer/lvl1Btn"
+@onready var lvl_2_btn = $"MarginContainer/HBoxContainer/Level 2/PanelContainer/lvl2Btn"
+@onready var lvl_3_btn = $"MarginContainer/HBoxContainer/Level 3/lvl3Btn"
+
 
 
 func _process(delta):

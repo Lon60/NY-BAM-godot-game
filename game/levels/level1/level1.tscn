@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbysje8huavuk"]
+[gd_scene load_steps=13 format=3 uid="uid://cbysje8huavuk"]
 
 [ext_resource type="Script" path="res://levels/level1/level1.gd" id="1_7r0un"]
 [ext_resource type="Texture2D" uid="uid://u7h0qtobbmes" path="res://assets/pixel-adventure/Terrain/Terrain (16x16).png" id="1_40dvt"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bxmu26upfhtpe" path="res://assets/tileset-cute-forest/Decors.png" id="6_r7lir"]
 [ext_resource type="PackedScene" uid="uid://bwp3w4nyfudpn" path="res://items/fan/fan.tscn" id="6_xvmgp"]
 [ext_resource type="PackedScene" uid="uid://c6e4mca460a0k" path="res://items/finish/finish.tscn" id="7_wyut7"]
-[ext_resource type="PackedScene" uid="uid://dk1f51wbcytmd" path="res://items/quicksand/quicksand.tscn" id="8_sgqhy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_js2jj"]
 shader = ExtResource("3_54ov5")
@@ -595,27 +594,6 @@ offset_right = 4682.0
 offset_bottom = 1969.0
 texture = ExtResource("2_ijban")
 stretch_mode = 1
-
-[node name="quicksandGroup" type="CanvasGroup" parent="."]
-visible = false
-
-[node name="quicksand" parent="quicksandGroup" instance=ExtResource("8_sgqhy")]
-position = Vector2(160, -32)
-
-[node name="quicksand2" parent="quicksandGroup" instance=ExtResource("8_sgqhy")]
-position = Vector2(160, -16)
-
-[node name="quicksand3" parent="quicksandGroup" instance=ExtResource("8_sgqhy")]
-position = Vector2(176, -32)
-
-[node name="quicksand4" parent="quicksandGroup" instance=ExtResource("8_sgqhy")]
-position = Vector2(176, -16)
-
-[node name="quicksand5" parent="quicksandGroup" instance=ExtResource("8_sgqhy")]
-position = Vector2(192, -32)
-
-[node name="quicksand6" parent="quicksandGroup" instance=ExtResource("8_sgqhy")]
-position = Vector2(192, -16)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_40dac")
