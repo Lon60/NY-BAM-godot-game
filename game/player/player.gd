@@ -15,6 +15,9 @@ var levelMenu: String = "res://menu/levelMenu/levelMenu.tscn"
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		SceneSwitcher.switch_scene(levelMenu)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -59,9 +62,7 @@ func _physics_process(delta):
 		await get_tree().create_timer(0.6).timeout
 		animPlaySpecial = false
 		SceneSwitcher.switch_scene(deathScreen)
-
-func _on_back_btn_pressed():
-	SceneSwitcher.switch_scene(levelMenu)
+	
 
 func playIrisIn():
 	animation_player.play("IrisIn")

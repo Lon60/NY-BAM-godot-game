@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://cw5sdxsiyjux"]
+[gd_scene load_steps=18 format=3 uid="uid://cw5sdxsiyjux"]
 
 [ext_resource type="Script" path="res://menu/levelMenu/levelMenu.gd" id="1_3q0ay"]
-[ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="4_wd6w1"]
 [ext_resource type="Texture2D" uid="uid://cow1d4qiofmgh" path="res://assets/padlock-pack/Robust Padlock/GOLD/Sprites/Robust Padlock - GOLD - 0000.png" id="5_1dkt4"]
 [ext_resource type="Texture2D" uid="uid://buwgcwwxpgfx" path="res://menu/levelMenu/level1.png" id="5_mrf5h"]
 [ext_resource type="Texture2D" uid="uid://lh4mgnqsh1e8" path="res://menu/levelMenu/level2.png" id="6_rujvx"]
@@ -320,14 +319,6 @@ offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="backBtn" type="Button" parent="MarginContainer"]
-visible = false
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-icon = ExtResource("4_wd6w1")
-flat = true
-expand_icon = true
-
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 alignment = 1
@@ -457,7 +448,6 @@ libraries = {
 "": SubResource("AnimationLibrary_54x5k")
 }
 
-[connection signal="pressed" from="MarginContainer/backBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/HBoxContainer/Level1/lvl1Btn" to="." method="_on_lvl_1_btn_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/HBoxContainer/Level1/lvl1Btn" to="." method="_on_lvl_1_btn_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Level1/lvl1Btn" to="." method="_on_lvl_1_btn_pressed"]

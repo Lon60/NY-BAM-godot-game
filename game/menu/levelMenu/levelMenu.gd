@@ -31,6 +31,10 @@ func _process(delta):
 		lvl_3_btn.disabled = false
 		level_3.add_theme_stylebox_override("panel", new_stylebox)
 		lvl3_padlock.hide()
+		
+	if Input.is_action_just_pressed("ui_cancel"):
+		SceneSwitcher.switch_scene(mainMenu)
+		
 func _on_lvl_1_btn_pressed():
 	GlobalController.lastPlayedLvl = 1
 	SceneSwitcher.switch_scene(lvl1)
@@ -42,10 +46,6 @@ func _on_lvl_2_btn_pressed():
 func _on_lvl_3_btn_pressed():
 	GlobalController.lastPlayedLvl = 3
 	SceneSwitcher.switch_scene(lvl3)
-
-func _on_back_btn_pressed():
-	SceneSwitcher.switch_scene(mainMenu)
-
 
 # --- visual effects ---
 #Lvl1
