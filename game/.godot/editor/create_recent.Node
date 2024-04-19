@@ -1,14 +1,14 @@
+TextureRect
+Control
 AnimatedSprite2D
 CollisionShape2D
 Area2D
 Timer
 CanvasGroup
-Control
 Container
 TextEdit
 Label
 HBoxContainer
-TextureRect
 Marker2D
 AnimationPlayer
 Sprite2D
