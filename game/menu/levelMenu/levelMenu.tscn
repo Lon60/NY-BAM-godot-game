@@ -16,12 +16,13 @@ axis_stretch_vertical = 2
 font_names = PackedStringArray("Press Start 2P")
 subpixel_positioning = 0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tr7n4"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bamxm"]
 texture = ExtResource("6_rujvx")
 modulate_color = Color(1, 1, 1, 0.266667)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1udyn"]
 texture = ExtResource("7_2yrx6")
+modulate_color = Color(1, 1, 1, 0.266667)
 
 [sub_resource type="Animation" id="Animation_qb3e0"]
 length = 0.001
@@ -364,7 +365,7 @@ custom_minimum_size = Vector2(380, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_tr7n4")
+theme_override_styles/panel = SubResource("StyleBoxTexture_bamxm")
 
 [node name="Level2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level2"]
 layout_mode = 2
@@ -414,11 +415,12 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_1udyn")
 [node name="Level3" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level3"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Level3/Level3"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer/Level3/Level3"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/margin_top = 120
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level3/Level3/MarginContainer"]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level3/Level3/MarginContainer2"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_1o0np")
 theme_override_font_sizes/font_size = 28
@@ -426,6 +428,21 @@ text = "Level
 impossible
 "
 horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Level3/Level3"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level3/Level3/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="padlock" type="TextureRect" parent="MarginContainer/HBoxContainer/Level3/Level3/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("5_1dkt4")
+stretch_mode = 5
 
 [node name="lvl3Btn" type="Button" parent="MarginContainer/HBoxContainer/Level3"]
 custom_minimum_size = Vector2(100, 100)

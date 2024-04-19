@@ -11,11 +11,18 @@ var mainMenu: String = "res://menu/mainMenu.tscn"
 
 @onready var animation_player = $AnimationPlayer
 
-
+@onready var level_2: Control = $MarginContainer/HBoxContainer/Level2
+@onready var level_3: Control = $MarginContainer/HBoxContainer/Level3
+const lvl2_png = preload("res://menu/levelMenu/level2.png")
+@onready var lvl2_padlock = $MarginContainer/HBoxContainer/Level2/Level2/HBoxContainer/VBoxContainer/padlock
 
 func _process(delta):
 	if GlobalController.canAccessLvl(2):
 		lvl_2_btn.disabled = false
+		var new_stylebox = StyleBoxTexture.new()
+		new_stylebox.texture = lvl2_png
+		level_2.add_theme_stylebox_override("panel", new_stylebox)
+		lvl2_padlock.hide()
 	if GlobalController.canAccessLvl(3):
 		lvl_3_btn.disabled = false
 		
