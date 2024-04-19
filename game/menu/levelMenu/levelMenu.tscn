@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://cw5sdxsiyjux"]
+[gd_scene load_steps=19 format=3 uid="uid://cw5sdxsiyjux"]
 
 [ext_resource type="Script" path="res://menu/levelMenu/levelMenu.gd" id="1_3q0ay"]
 [ext_resource type="Texture2D" uid="uid://v8edwr7y5gt" path="res://assets/pixel-adventure/Menu/Buttons/Back.png" id="4_wd6w1"]
+[ext_resource type="Texture2D" uid="uid://cow1d4qiofmgh" path="res://assets/padlock-pack/Robust Padlock/GOLD/Sprites/Robust Padlock - GOLD - 0000.png" id="5_1dkt4"]
 [ext_resource type="Texture2D" uid="uid://buwgcwwxpgfx" path="res://menu/levelMenu/level1.png" id="5_mrf5h"]
 [ext_resource type="Texture2D" uid="uid://lh4mgnqsh1e8" path="res://menu/levelMenu/level2.png" id="6_rujvx"]
 [ext_resource type="Texture2D" uid="uid://dkd2wo4a8cx78" path="res://menu/levelMenu/level3.png" id="7_2yrx6"]
@@ -17,6 +18,7 @@ subpixel_positioning = 0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tr7n4"]
 texture = ExtResource("6_rujvx")
+modulate_color = Color(1, 1, 1, 0.266667)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1udyn"]
 texture = ExtResource("7_2yrx6")
@@ -369,6 +371,7 @@ layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Level2/Level2"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/margin_top = 120
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level2/Level2/MarginContainer"]
@@ -377,6 +380,21 @@ theme_override_fonts/font = SubResource("SystemFont_1o0np")
 theme_override_font_sizes/font_size = 28
 text = "Level 2"
 horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Level2/Level2"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level2/Level2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="padlock" type="TextureRect" parent="MarginContainer/HBoxContainer/Level2/Level2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("5_1dkt4")
+stretch_mode = 5
 
 [node name="lvl2Btn" type="Button" parent="MarginContainer/HBoxContainer/Level2"]
 custom_minimum_size = Vector2(100, 100)

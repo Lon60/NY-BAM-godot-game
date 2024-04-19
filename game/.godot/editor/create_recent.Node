@@ -1,3 +1,6 @@
+VBoxContainer
+HBoxContainer
+TextureRect
 AnimationPlayer
 AnimationTree
 MarginContainer
@@ -5,11 +8,7 @@ PanelContainer
 Panel
 Control
 ColorRect
-HBoxContainer
 Label
-VBoxContainer
 CollisionPolygon2D
 CollisionShape2D
 StaticBody2D
-CanvasGroup
-TextureRect
