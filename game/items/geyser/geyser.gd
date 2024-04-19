@@ -8,17 +8,19 @@ var count = 1
 
 func _on_timer_timeout():
 	if on:
-		cpu_particles_2d.emitting = false
-		animated_sprite_2d.play("off")
-		count += 1
 		if count == 5:
+			cpu_particles_2d.emitting = false
+			cpu_particles_2d.hide()
 			on = false
+			animated_sprite_2d.play("off")
+			count = 1
 		else:
-			on = true
+			count += 1
 	else:
 		cpu_particles_2d.emitting = true
-		animated_sprite_2d.play("on")
+		cpu_particles_2d.show()
 		on = true
+		animated_sprite_2d.play("on")
 
 func _on_area_2d_body_entered(body):
 	if on && body && body.is_in_group("player"):
