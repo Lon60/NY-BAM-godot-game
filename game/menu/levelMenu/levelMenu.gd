@@ -9,9 +9,8 @@ var mainMenu: String = "res://menu/mainMenu.tscn"
 @onready var lvl_2_btn: Button = $MarginContainer/HBoxContainer/Level2/lvl2Btn
 @onready var lvl_3_btn: Button = $MarginContainer/HBoxContainer/Level3/lvl3Btn
 
-@onready var level_1: Control = $MarginContainer/HBoxContainer/Level1
-@onready var level_2: Control = $MarginContainer/HBoxContainer/Level2
-@onready var level_3: Control = $MarginContainer/HBoxContainer/Level3
+@onready var animation_player = $AnimationPlayer
+
 
 
 func _process(delta):
@@ -38,11 +37,7 @@ func _on_back_btn_pressed():
 
 # --- visual effects ---
 func _on_lvl_1_btn_mouse_entered():
-	level_1.custom_minimum_size.x = 500
-	level_2.custom_minimum_size.x = 320
-	level_3.custom_minimum_size.x = 320
+	animation_player.play("lvl1_mouseEnter")
 func _on_lvl_1_btn_mouse_exited():
-	level_1.custom_minimum_size.x = 380
-	level_2.custom_minimum_size.x = 380
-	level_3.custom_minimum_size.x = 380
+	animation_player.play("lvl1_mouseLeft")
 
