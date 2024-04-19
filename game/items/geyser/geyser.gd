@@ -4,7 +4,7 @@ extends Node2D
 @onready var fire = $Fire
 
 var on = false
-var count = 1
+@export var count = 1
 
 func _on_timer_timeout():
 	if on:
