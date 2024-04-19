@@ -12,3 +12,4 @@ res://menu/levelMenu/levelMenu.tscn
 res://menu/levelMenu/levelMenu.gd
 res://levels/level1/level1.tscn
 res://player/player.gd
+res://menu/mainMenu.tscn
