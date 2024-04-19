@@ -47,3 +47,7 @@ func _on_lvl_2_btn_mouse_entered():
 func _on_lvl_2_btn_mouse_exited():
 	animation_player.play("lvl2_mouseLeft")
 #Lvl3
+func _on_lvl_3_btn_mouse_entered():
+	animation_player.play("lvl3_mouseEnter")
+func _on_lvl_3_btn_mouse_exited():
+	animation_player.play("lvl3_mouseLeft")
