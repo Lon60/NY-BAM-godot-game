@@ -1,16 +1,4 @@
-res://items/fan2/fan2.tscn
+res://menu/settings/settings.tscn
 res://assets/irisShot.gdshader
 res://assets/bg.gdshader
 res://assets/bg2.gdshader
-res://levels/level3/level3.tscn
-res://items/bouncePad/bouncePad.tscn
-res://levels/level2/level2.tscn
-res://player/player.tscn
-res://items/geyser/geyser.tscn
-res://items/geyser/geyser.gd
-res://menu/levelMenu/levelMenu.tscn
-res://menu/levelMenu/levelMenu.gd
-res://levels/level1/level1.tscn
-res://player/player.gd
-res://menu/mainMenu.tscn
-res://menu/settings/settings.tscn
