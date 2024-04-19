@@ -207,7 +207,7 @@ rotation = -1.5708
 scale = Vector2(1, 9.99921)
 sprite_frames = SubResource("SpriteFrames_crlqw")
 animation = &"loop"
-frame_progress = 0.280283
+frame_progress = 0.849094
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

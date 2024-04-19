@@ -36,8 +36,14 @@ func _on_back_btn_pressed():
 
 
 # --- visual effects ---
+#Lvl1
 func _on_lvl_1_btn_mouse_entered():
 	animation_player.play("lvl1_mouseEnter")
 func _on_lvl_1_btn_mouse_exited():
 	animation_player.play("lvl1_mouseLeft")
-
+#Lvl2
+func _on_lvl_2_btn_mouse_entered():
+	animation_player.play("lvl2_mouseEnter")
+func _on_lvl_2_btn_mouse_exited():
+	animation_player.play("lvl2_mouseLeft")
+#Lvl3
