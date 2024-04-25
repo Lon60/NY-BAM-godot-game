@@ -5,6 +5,7 @@ var SPEED: float = 300.0
 const JUMP_VELOCITY: float = -400.0
 var dead: bool = false
 var animPlaySpecial = false
+var directionRight = true
 
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
@@ -21,6 +22,7 @@ func _process(delta):
 		SceneSwitcher.switch_scene(levelMenu)
 	if Input.is_action_just_pressed("shoot"):
 		var current_bullet = bullet.instantiate()
+		current_bullet.directionRight = directionRight
 		gun_bullet_spawn.add_child(current_bullet)
 
 func _physics_process(delta):
@@ -49,9 +51,11 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 		
 		if(velocity.x < 0):
-				animSprite.flip_h = true;
+			directionRight = false
+			animSprite.flip_h = true;
 		else:
-				animSprite.flip_h = false;
+			directionRight = true
+			animSprite.flip_h = false;
 
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

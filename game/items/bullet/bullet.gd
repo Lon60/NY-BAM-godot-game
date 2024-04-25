@@ -4,11 +4,21 @@ extends Area2D
 @onready var cpu_particles_2d = $CPUParticles2D
 @onready var texture_rect = $TextureRect
 
+var directionRight = true
 var hit = false
+
+func _ready():
+	if directionRight:
+		texture_rect.flip_h = true
+	else:
+		texture_rect.flip_h = false
 
 func _process(delta):
 	if !hit:
-		bullet.position.x += 200 * delta
+		if directionRight:
+			bullet.position.x += 200 * delta
+		else:
+			bullet.position.x -= 200 * delta
 
 
 func _on_body_entered(body):
