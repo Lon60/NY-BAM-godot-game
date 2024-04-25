@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://du81omnego2kp"]
+[gd_scene load_steps=47 format=3 uid="uid://du81omnego2kp"]
 
 [ext_resource type="Texture2D" uid="uid://mf4pq2614rwo" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Fall (32x32).png" id="1_bdcph"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_hgwe2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1xkgxr3dxaru" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Run (32x32).png" id="2_ax1c3"]
 [ext_resource type="Texture2D" uid="uid://iwaay3m7g3cs" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Hit (32x32).png" id="3_5aje3"]
 [ext_resource type="Texture2D" uid="uid://dodj01mkpxxy7" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Jump (32x32).png" id="3_leen6"]
+[ext_resource type="Texture2D" uid="uid://cjs05kotkmonn" path="res://assets/kenney_blasterKit/Side/blasterN.png" id="9_tl7q1"]
 [ext_resource type="Shader" path="res://assets/irisShot.gdshader" id="9_ysbbp"]
 [ext_resource type="Texture2D" uid="uid://cmq4svv6hi4jq" path="res://assets/white.png" id="10_r7uif"]
 
@@ -337,3 +338,15 @@ texture = ExtResource("10_r7uif")
 libraries = {
 "": SubResource("AnimationLibrary_n7lxt")
 }
+
+[node name="gun" type="TextureRect" parent="."]
+offset_left = 7.0
+offset_top = -3.0
+offset_right = 31.0
+offset_bottom = 10.0
+texture = ExtResource("9_tl7q1")
+expand_mode = 1
+flip_h = true
+
+[node name="gunBulletSpawn" type="Marker2D" parent="gun"]
+position = Vector2(24, 3)

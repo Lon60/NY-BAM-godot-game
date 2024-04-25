@@ -1,7 +1,11 @@
+CPUParticles2D
+TextureRect
+CollisionShape2D
+Area2D
+Marker2D
 VBoxContainer
 HBoxContainer
 TileMap
-TextureRect
 AnimationPlayer
 AnimationTree
 MarginContainer
@@ -9,6 +13,3 @@ PanelContainer
 Panel
 Control
 ColorRect
-Label
-CollisionPolygon2D
-CollisionShape2D
