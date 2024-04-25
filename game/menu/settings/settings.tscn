@@ -181,5 +181,12 @@ theme_override_font_sizes/font_size = 18
 text = "Cute Forest - 	aamatniekss"
 horizontal_alignment = 1
 
+[node name="Label12" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 18
+text = "Blaster Kit - 	kenney"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainer/fpsEdit" to="." method="_on_fps_edit_text_changed"]
