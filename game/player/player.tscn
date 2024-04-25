@@ -317,11 +317,9 @@ _data = {
 script = ExtResource("1_hgwe2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_po24l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -2)
 sprite_frames = SubResource("SpriteFrames_jfv8e")
 animation = &"run"
 
@@ -330,7 +328,7 @@ zoom = Vector2(2.5, 2.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_7exec")
-position = Vector2(1.52588e-05, 2)
+position = Vector2(4.59177e-41, 0)
 scale = Vector2(2.78039, 1.90404)
 texture = ExtResource("10_r7uif")
 
@@ -340,13 +338,13 @@ libraries = {
 }
 
 [node name="gun" type="TextureRect" parent="."]
-offset_left = 7.0
-offset_top = -3.0
-offset_right = 31.0
-offset_bottom = 10.0
+offset_left = 10.0
+offset_top = -2.0
+offset_right = 34.0
+offset_bottom = 11.0
 texture = ExtResource("9_tl7q1")
 expand_mode = 1
 flip_h = true
 
 [node name="gunBulletSpawn" type="Marker2D" parent="gun"]
-position = Vector2(24, 3)
+position = Vector2(13, 3)

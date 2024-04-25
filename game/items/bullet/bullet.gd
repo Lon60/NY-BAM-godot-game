@@ -20,7 +20,6 @@ func _process(delta):
 		else:
 			bullet.position.x -= 200 * delta
 
-
 func _on_body_entered(body):
 	hit = true
 	texture_rect.visible = false
