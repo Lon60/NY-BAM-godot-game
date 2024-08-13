@@ -25,8 +25,6 @@ func _on_area_2d_body_entered(body):
 	if on && body && body.is_in_group("player"):
 		body.dead = true
 
-
-
 func _on_fire_animation_finished():
 	if !on:
 		fire.hide()

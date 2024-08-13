@@ -1,3 +1,4 @@
+Sprite2D
 CPUParticles2D
 TextureRect
 CollisionShape2D
@@ -12,4 +13,3 @@ MarginContainer
 PanelContainer
 Panel
 Control
-ColorRect

@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
 
-var SPEED: float = 300.0
-const JUMP_VELOCITY: float = -400.0
-var dead: bool = false
-var animPlaySpecial = false
-var directionRight = true
+var SPEED := 300.0
+const JUMP_VELOCITY := -400.0
+var dead := false
+var animPlaySpecial := false
+var directionRight := true
 
-@onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var animation_player = $AnimationPlayer
+@onready var player_sprite: Sprite2D = %PlayerSprite
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 var deathScreen: String = "res://menu/deathScreen/deathScreen.tscn"
 var levelMenu: String = "res://menu/levelMenu/levelMenu.tscn"
 @onready var gun_bullet_spawn = $gun/gunBulletSpawn
@@ -31,22 +31,20 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta	
 		if(velocity.y > 0):
-				animSprite.play("fall")
+			pass # fall
 		else:
-				animSprite.play("jump")
+			pass # jump
 	else:
 		if(velocity.x == 0 && !animPlaySpecial):
-				animSprite.play("idle")
+			animation_player.stop() # idle
 		elif !animPlaySpecial:
-				animSprite.play("run")
-
+			animation_player.play("player_run")
+		
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
-
+	
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -57,31 +55,27 @@ func _physics_process(delta):
 				gun_bullet_spawn.position.x = gun_bullet_spawn.position.x * -1 
 			directionRight = false
 			gun.flip_h = false
-			animSprite.flip_h = true;
+			player_sprite.flip_h = true;
 		else:
 			if !directionRight:
 				gun.position.x = 10
 				gun_bullet_spawn.position.x = gun_bullet_spawn.position.x * -1
 			directionRight = true
 			gun.flip_h = true
-			animSprite.flip_h = false;
-
+			player_sprite.flip_h = false;
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-
+	
 	move_and_slide()
 	
 	if dead:
 		dead = false
 		animPlaySpecial = true
-		animSprite.play("hit")
 		await get_tree().create_timer(0.6).timeout
 		animPlaySpecial = false
 		SceneSwitcher.switch_scene(deathScreen)
-	
 
 func playIrisIn():
-	animation_player.play("IrisIn")
+	animation_player.play_backwards("iris")
 func playIrisOut():
-	animation_player.play("IrisOut")
+	animation_player.play("iris")
