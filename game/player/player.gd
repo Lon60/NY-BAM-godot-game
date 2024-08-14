@@ -8,7 +8,7 @@ var animPlaySpecial := false
 var directionRight := true
 
 @onready var player_sprite: Sprite2D = %PlayerSprite
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_player = $AnimationPlayer
 var deathScreen: String = "res://menu/deathScreen/deathScreen.tscn"
 var levelMenu: String = "res://menu/levelMenu/levelMenu.tscn"
 @onready var gun_bullet_spawn = $gun/gunBulletSpawn
@@ -35,8 +35,8 @@ func _physics_process(delta):
 		else:
 			pass # jump
 	else:
-		if(velocity.x == 0 && !animPlaySpecial):
-			animation_player.stop() # idle
+		if(velocity.x == 0 && !animPlaySpecial) and animation_player.animation_finished:
+			animation_player.play("idle")
 		elif !animPlaySpecial:
 			animation_player.play("player_run")
 		
@@ -76,6 +76,6 @@ func _physics_process(delta):
 		SceneSwitcher.switch_scene(deathScreen)
 
 func playIrisIn():
-	animation_player.play_backwards("iris")
+	animation_player.play("IrisIn")
 func playIrisOut():
-	animation_player.play("iris")
+	animation_player.play_backwards("IrisIn")

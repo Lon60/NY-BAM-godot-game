@@ -1,3 +1,4 @@
+TileMap
 Sprite2D
 CPUParticles2D
 TextureRect
@@ -6,10 +7,8 @@ Area2D
 Marker2D
 VBoxContainer
 HBoxContainer
-TileMap
 AnimationPlayer
 AnimationTree
 MarginContainer
 PanelContainer
 Panel
-Control
