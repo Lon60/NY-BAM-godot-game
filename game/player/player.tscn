@@ -13,6 +13,21 @@ height = 46.0
 shader = ExtResource("9_ysbbp")
 shader_parameter/radius = 1.2
 
+[sub_resource type="Animation" id="Animation_u67ui"]
+resource_name = "IrisIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.2, 0.0]
+}
+
 [sub_resource type="Animation" id="Animation_gi3hh"]
 length = 0.001
 tracks/0/type = "value"
@@ -76,37 +91,6 @@ tracks/4/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_hkfit"]
-resource_name = "player_run"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.218166, 0.0, 0.218166, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_u67ui"]
-resource_name = "IrisIn"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:material:shader_parameter/radius")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.2, 0.0]
-}
-
 [sub_resource type="Animation" id="Animation_o68xt"]
 resource_name = "idle"
 length = 0.6
@@ -146,6 +130,22 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hkfit"]
+resource_name = "player_run"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.218166, 0.0, 0.218166, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n7lxt"]
