@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dyl8wy5totvmr" path="res://items/spike/spike.tscn" id="6_mqi4u"]
 [ext_resource type="PackedScene" uid="uid://c6e4mca460a0k" path="res://items/finish/finish.tscn" id="6_plo5r"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1ir0k"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m4530"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsrxf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ru7jc"]
 texture = ExtResource("3_ye4yl")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
@@ -593,8 +593,8 @@ texture_region_size = Vector2i(8, 8)
 [sub_resource type="TileSet" id="TileSet_kwe7t"]
 tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_1ir0k")
-sources/1 = SubResource("TileSetAtlasSource_lsrxf")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_m4530")
+sources/1 = SubResource("TileSetAtlasSource_ru7jc")
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_qgw3j")

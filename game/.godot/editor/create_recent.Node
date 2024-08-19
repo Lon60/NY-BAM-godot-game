@@ -1,7 +1,7 @@
+
 TileMapLayer
 Node2D
 TileMap
-Sprite2D
 CPUParticles2D
 TextureRect
 CollisionShape2D
