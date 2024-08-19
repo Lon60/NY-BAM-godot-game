@@ -26,4 +26,3 @@ func _on_body_entered(body):
 	cpu_particles_2d.emitting = true
 	await get_tree().create_timer(0.5).timeout
 	queue_free()
-
