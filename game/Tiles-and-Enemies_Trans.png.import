@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8wrpjdxbdhly"
-path="res://.godot/imported/x2-Tiles-and-enemies_v2.png-aef16155136dba4bfa13692303bce94c.ctex"
+uid="uid://7ekxfrq55qnc"
+path="res://.godot/imported/Tiles-and-Enemies_Trans.png-aff910ffc3e0180bcf184d16952b5e21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/x2-Tiles-and-enemies_v2.png"
-dest_files=["res://.godot/imported/x2-Tiles-and-enemies_v2.png-aef16155136dba4bfa13692303bce94c.ctex"]
+source_file="res://Tiles-and-Enemies_Trans.png"
+dest_files=["res://.godot/imported/Tiles-and-Enemies_Trans.png-aff910ffc3e0180bcf184d16952b5e21.ctex"]
 
 [params]
 
