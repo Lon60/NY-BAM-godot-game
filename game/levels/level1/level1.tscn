@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cw7lmqetche15" path="res://items/bouncePad/bouncePad.tscn" id="6_7tjcv"]
 [ext_resource type="PackedScene" uid="uid://c6e4mca460a0k" path="res://items/finish/finish.tscn" id="7_wyut7"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1ir0k"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4ioov"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpt62"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lx61k"]
 texture = ExtResource("4_2j5x6")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
@@ -593,8 +593,8 @@ texture_region_size = Vector2i(8, 8)
 [sub_resource type="TileSet" id="TileSet_pk1c3"]
 tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_1ir0k")
-sources/1 = SubResource("TileSetAtlasSource_xpt62")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_4ioov")
+sources/1 = SubResource("TileSetAtlasSource_lx61k")
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_7r0un")

@@ -600,7 +600,7 @@ sources/1 = SubResource("TileSetAtlasSource_ru7jc")
 script = ExtResource("1_qgw3j")
 
 [node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(933, 1199)
+position = Vector2(1023, 1218)
 scale = Vector2(16.2467, 13.7883)
 texture = ExtResource("2_ee8mr")
 
