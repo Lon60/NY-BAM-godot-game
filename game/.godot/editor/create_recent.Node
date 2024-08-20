@@ -1,6 +1,5 @@
-
-TileMapLayer
 Node2D
+TileMapLayer
 TileMap
 CPUParticles2D
 TextureRect
