@@ -1,0 +1,15 @@
+ColorRect
+Panel
+Node2D
+TileMapLayer
+TileMap
+CPUParticles2D
+TextureRect
+CollisionShape2D
+Area2D
+Marker2D
+VBoxContainer
+HBoxContainer
+AnimationPlayer
+AnimationTree
+MarginContainer
