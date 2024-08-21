@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmq4svv6hi4jq" path="res://assets/white.png" id="10_r7uif"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hftqk"]
+radius = 8.0
 height = 40.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7exec"]
@@ -183,6 +184,7 @@ texture = ExtResource("10_r7uif")
 libraries = {
 "": SubResource("AnimationLibrary_n7lxt")
 }
+autoplay = "player_run"
 
 [node name="gun" type="TextureRect" parent="."]
 visible = false
