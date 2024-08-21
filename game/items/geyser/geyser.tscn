@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cgrj8pwtrso7a" path="res://assets/pixel-adventure/Traps/Fire/Off.png" id="1_4bpt6"]
 [ext_resource type="Script" path="res://items/geyser/geyser.gd" id="1_tld2y"]
 [ext_resource type="Texture2D" uid="uid://by81kgvm8wrk0" path="res://assets/pixel-adventure/Traps/Fire/On (16x32).png" id="2_kxdti"]
-[ext_resource type="Texture2D" uid="uid://cdkwihc3nxreg" path="res://assets/fire_fx/png/orange/end/burning_end_1.png" id="4_207hu"]
-[ext_resource type="Texture2D" uid="uid://dlk0c0giqruyx" path="res://assets/fire_fx/png/orange/start/burning_start_1.png" id="4_btiyc"]
-[ext_resource type="Texture2D" uid="uid://hqhvqhf22kcr" path="res://assets/fire_fx/png/orange/loops/burning_loop_1.png" id="5_1v6bo"]
+[ext_resource type="Texture2D" uid="uid://cdkwihc3nxreg" path="res://assets/fire_fx/end/burning_end_1.png" id="4_207hu"]
+[ext_resource type="Texture2D" uid="uid://dlk0c0giqruyx" path="res://assets/fire_fx/start/burning_start_1.png" id="4_btiyc"]
+[ext_resource type="Texture2D" uid="uid://hqhvqhf22kcr" path="res://assets/fire_fx/loops/burning_loop_1.png" id="5_1v6bo"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ostfh"]
 atlas = ExtResource("2_kxdti")

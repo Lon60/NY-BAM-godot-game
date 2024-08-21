@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" path="res://menu/levelMenu/levelMenu.gd" id="1_3q0ay"]
 [ext_resource type="Texture2D" uid="uid://cow1d4qiofmgh" path="res://assets/padlock-pack/Robust Padlock/GOLD/Sprites/Robust Padlock - GOLD - 0000.png" id="5_1dkt4"]
-[ext_resource type="Texture2D" uid="uid://buwgcwwxpgfx" path="res://menu/levelMenu/level1.png" id="5_mrf5h"]
-[ext_resource type="Texture2D" uid="uid://lh4mgnqsh1e8" path="res://menu/levelMenu/level2.png" id="6_rujvx"]
-[ext_resource type="Texture2D" uid="uid://dkd2wo4a8cx78" path="res://menu/levelMenu/level3.png" id="7_2yrx6"]
+[ext_resource type="Texture2D" uid="uid://bm7khhpky2ql0" path="res://menu/levelMenu/level2.png" id="6_rujvx"]
+[ext_resource type="Texture2D" uid="uid://bhpweqhol2dde" path="res://menu/levelMenu/level3.png" id="7_2yrx6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dixwq"]
+load_path = "res://.godot/imported/level1.png-f7f915be5430613b308e3761560e3084.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7qcr"]
-texture = ExtResource("5_mrf5h")
+texture = SubResource("CompressedTexture2D_dixwq")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 

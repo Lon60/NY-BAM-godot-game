@@ -1,13 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://du81omnego2kp"]
+[gd_scene load_steps=11 format=3 uid="uid://du81omnego2kp"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_hgwe2"]
 [ext_resource type="Texture2D" uid="uid://qv7rwbarfyk0" path="res://assets/Testsprite.png" id="2_eqdcx"]
-[ext_resource type="Texture2D" path="res://assets/kenney_blasterKit/Side/blasterN.png" id="9_tl7q1"]
 [ext_resource type="Shader" path="res://assets/irisShot.gdshader" id="9_ysbbp"]
-[ext_resource type="Texture2D" uid="uid://cmq4svv6hi4jq" path="res://assets/white.png" id="10_r7uif"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hftqk"]
-radius = 8.0
 height = 40.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7exec"]
@@ -16,52 +13,76 @@ shader_parameter/radius = 1.2
 
 [sub_resource type="Animation" id="Animation_u67ui"]
 resource_name = "IrisIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.2, 0.0]
+}
 
 [sub_resource type="Animation" id="Animation_gi3hh"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/radius")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [1.2]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("PlayerSprite:scale")
+tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.05, 0.05)]
+"values": [0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("PlayerSprite:position")
+tracks/2/path = NodePath("PlayerSprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2.08165e-12, 3.7)]
+"values": [Vector2(0.05, 0.05)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("PlayerSprite:rotation")
+tracks/3/path = NodePath("PlayerSprite:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.08165e-12, 3.7)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerSprite:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -154,23 +175,8 @@ visible = false
 material = SubResource("ShaderMaterial_7exec")
 position = Vector2(-1, -1)
 scale = Vector2(2.78039, 1.90404)
-texture = ExtResource("10_r7uif")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_n7lxt")
 }
-autoplay = "player_run"
-
-[node name="gun" type="TextureRect" parent="."]
-visible = false
-offset_left = 10.0
-offset_top = -2.0
-offset_right = 34.0
-offset_bottom = 11.0
-texture = ExtResource("9_tl7q1")
-expand_mode = 1
-flip_h = true
-
-[node name="gunBulletSpawn" type="Marker2D" parent="gun"]
-position = Vector2(13, 3)

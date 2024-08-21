@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm7khhpky2ql0"
-path="res://.godot/imported/level2.png-b55de6d77e778d58f3a4c188f43866af.ctex"
+uid="uid://nv5w1pbjp874"
+path="res://.godot/imported/burning_loop_5.png-d47dd37ebad30de71b754a22d5eab612.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/levelMenu/level2.png"
-dest_files=["res://.godot/imported/level2.png-b55de6d77e778d58f3a4c188f43866af.ctex"]
+source_file="res://assets/fire_fx/loops/burning_loop_5.png"
+dest_files=["res://.godot/imported/burning_loop_5.png-d47dd37ebad30de71b754a22d5eab612.ctex"]
 
 [params]
 

@@ -8,10 +8,10 @@
 font_names = PackedStringArray("Press Start 2P")
 
 [sub_resource type="SystemFont" id="SystemFont_ye4kl"]
-font_names = PackedStringArray("Press Start 2P")
+subpixel_positioning = 0
 
-[sub_resource type="SystemFont" id="SystemFont_a51ie"]
-font_names = PackedStringArray("Press Start 2P")
+[sub_resource type="SystemFont" id="SystemFont_a3n3k"]
+font_names = PackedStringArray("Arial")
 
 [node name="Settings" type="Node2D"]
 script = ExtResource("1_nj8j6")
@@ -62,131 +62,127 @@ expand_icon = true
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Credits" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.686275, 0.627451, 0.521569, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = SubResource("SystemFont_b3uy7")
 theme_override_font_sizes/font_size = 64
-text = "Settings"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ye4kl")
-theme_override_font_sizes/font_size = 28
-text = "Max FPS:"
-
-[node name="fpsEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_a51ie")
-theme_override_font_sizes/font_size = 24
-
-[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+text = "Credits"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 100
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 40
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
+alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 28
-text = "Asset Credits"
+text = "Assets"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ye4kl")
-theme_override_font_sizes/font_size = 18
-text = "Cave (1/2) - Ludenc"
-horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Cave (2/2) - 	The Pixel Nook"
+text = "Cave - 	von The Pixel Nook"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Fire Animation - 	brullov"
+text = "Fire Animation - von brullov"
 horizontal_alignment = 1
-
-[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ye4kl")
-theme_override_font_sizes/font_size = 18
-text = "Jungle Pack - 	Jesse Munguia"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ye4kl")
-theme_override_font_sizes/font_size = 18
-text = "Oak Woods - brullov"
-horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Padlock - karsiori"
+text = "Padlock - von karsiori"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Pixel Adventure - Pixel Frog"
+text = "Pixel Adventure - von Pixel Frog"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Cave Objects - craftpix"
+text = "Tilemap - von VEXED - modifiziert von Linus (NY)"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label10" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Cave entrance & tree - snitran"
+text = "Avatar - von Noah (NY)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ye4kl")
+theme_override_font_sizes/font_size = 28
+text = "Developer"
 horizontal_alignment = 1
 
-[node name="Label11" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Cute Forest - 	aamatniekss"
+text = "Menu & Level 1 - 	Leon (NY)"
 horizontal_alignment = 1
 
-[node name="Label12" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
-text = "Blaster Kit - 	kenney"
+text = "Level 2 & 3 - 	Björn (NY)"
+horizontal_alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_a3n3k")
+theme_override_font_sizes/font_size = 10
+text = "In Auftrag der Noser Young AG (Bern)"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]
-[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainer/fpsEdit" to="." method="_on_fps_edit_text_changed"]
