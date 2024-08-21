@@ -11,20 +11,12 @@ var directionRight := true
 @onready var animation_player = $AnimationPlayer
 var deathScreen: String = "res://menu/deathScreen/deathScreen.tscn"
 var levelMenu: String = "res://menu/levelMenu/levelMenu.tscn"
-@onready var gun_bullet_spawn = $gun/gunBulletSpawn
-@onready var gun = $gun
-const bullet = preload("res://items/bullet/bullet.tscn")
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		SceneSwitcher.switch_scene(levelMenu)
-	if Input.is_action_just_pressed("shoot"):
-		var current_bullet = bullet.instantiate()
-		current_bullet.directionRight = directionRight
-		current_bullet.global_position = gun_bullet_spawn.global_position
-		get_parent().add_child(current_bullet)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -50,18 +42,10 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 		
 		if(velocity.x < 0):
-			if directionRight:
-				gun.position.x = -30
-				gun_bullet_spawn.position.x = gun_bullet_spawn.position.x * -1 
 			directionRight = false
-			gun.flip_h = false
 			player_sprite.flip_h = true;
 		else:
-			if !directionRight:
-				gun.position.x = 10
-				gun_bullet_spawn.position.x = gun_bullet_spawn.position.x * -1
 			directionRight = true
-			gun.flip_h = true
 			player_sprite.flip_h = false;
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

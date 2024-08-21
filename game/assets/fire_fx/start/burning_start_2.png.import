@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm7khhpky2ql0"
-path="res://.godot/imported/level2.png-b55de6d77e778d58f3a4c188f43866af.ctex"
+uid="uid://dkw67sspqqobi"
+path="res://.godot/imported/burning_start_2.png-9bac2183798bee5c245a35917a1d90a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/levelMenu/level2.png"
-dest_files=["res://.godot/imported/level2.png-b55de6d77e778d58f3a4c188f43866af.ctex"]
+source_file="res://assets/fire_fx/start/burning_start_2.png"
+dest_files=["res://.godot/imported/burning_start_2.png-9bac2183798bee5c245a35917a1d90a0.ctex"]
 
 [params]
 
