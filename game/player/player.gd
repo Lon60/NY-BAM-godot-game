@@ -54,8 +54,3 @@ func _physics_process(delta):
 	if dead:
 		dead = false
 		SceneSwitcher.switch_scene(deathScreen)
-
-func playIrisIn():
-	animation_player.play("IrisIn")
-func playIrisOut():
-	animation_player.play_backwards("IrisIn")
