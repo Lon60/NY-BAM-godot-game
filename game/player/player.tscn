@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://du81omnego2kp"]
+[gd_scene load_steps=12 format=3 uid="uid://du81omnego2kp"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_hgwe2"]
 [ext_resource type="Texture2D" uid="uid://qv7rwbarfyk0" path="res://assets/Testsprite.png" id="2_eqdcx"]
-[ext_resource type="Texture2D" path="res://assets/kenney_blasterKit/Side/blasterN.png" id="9_tl7q1"]
 [ext_resource type="Shader" path="res://assets/irisShot.gdshader" id="9_ysbbp"]
 [ext_resource type="Texture2D" uid="uid://cmq4svv6hi4jq" path="res://assets/white.png" id="10_r7uif"]
 
@@ -161,16 +160,3 @@ libraries = {
 "": SubResource("AnimationLibrary_n7lxt")
 }
 autoplay = "player_run"
-
-[node name="gun" type="TextureRect" parent="."]
-visible = false
-offset_left = 10.0
-offset_top = -2.0
-offset_right = 34.0
-offset_bottom = 11.0
-texture = ExtResource("9_tl7q1")
-expand_mode = 1
-flip_h = true
-
-[node name="gunBulletSpawn" type="Marker2D" parent="gun"]
-position = Vector2(13, 3)
