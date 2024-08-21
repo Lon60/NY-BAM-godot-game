@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qu74m4kmq331"]
+[gd_scene load_steps=7 format=3 uid="uid://qu74m4kmq331"]
 
 [ext_resource type="Script" path="res://menu/settings/settings.gd" id="1_nj8j6"]
 [ext_resource type="Texture2D" uid="uid://bfscns4n5ny7e" path="res://assets/cave-tileset-free/Background.png" id="2_v2yrh"]
@@ -8,9 +8,6 @@
 font_names = PackedStringArray("Press Start 2P")
 
 [sub_resource type="SystemFont" id="SystemFont_ye4kl"]
-
-[sub_resource type="SystemFont" id="SystemFont_a51ie"]
-font_names = PackedStringArray("Press Start 2P")
 
 [sub_resource type="SystemFont" id="SystemFont_a3n3k"]
 font_names = PackedStringArray("Arial")
@@ -64,44 +61,18 @@ expand_icon = true
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Credits" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.686275, 0.627451, 0.521569, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = SubResource("SystemFont_b3uy7")
 theme_override_font_sizes/font_size = 64
-text = "Settings"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ye4kl")
-theme_override_font_sizes/font_size = 28
-text = "Max FPS:"
-
-[node name="fpsEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_a51ie")
-theme_override_font_sizes/font_size = 24
-
-[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+text = "Credits"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 100
 alignment = 1
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ye4kl")
-theme_override_font_sizes/font_size = 28
-text = "Credits"
-horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -111,6 +82,7 @@ alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
+alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -118,6 +90,7 @@ theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 28
 text = "Assets"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -128,6 +101,7 @@ theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
 text = "Cave - 	von The Pixel Nook"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -135,6 +109,7 @@ theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
 text = "Fire Animation - von brullov"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -142,6 +117,7 @@ theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
 text = "Padlock - von karsiori"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -149,6 +125,7 @@ theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
 text = "Pixel Adventure - von Pixel Frog"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -156,6 +133,7 @@ theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
 text = "Tilemap - von VEXED - modifiziert von Linus (NY)"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label10" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -163,6 +141,7 @@ theme_override_fonts/font = SubResource("SystemFont_ye4kl")
 theme_override_font_sizes/font_size = 18
 text = "Avatar - von Noah (NY)"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Seperator2" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -206,4 +185,3 @@ text = "In Auftrag der Noser Young AG (Bern)"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/backBtn" to="." method="_on_back_btn_pressed"]
-[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainer/fpsEdit" to="." method="_on_fps_edit_text_changed"]
