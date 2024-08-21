@@ -1,11 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://byj8vcf62axd3"]
+[gd_scene load_steps=5 format=3 uid="uid://byj8vcf62axd3"]
 
 [ext_resource type="Script" path="res://menu/deathScreen/deathScreen.gd" id="1_gsmvy"]
-[ext_resource type="Shader" path="res://assets/bg2.gdshader" id="1_urw4m"]
-[ext_resource type="Texture2D" uid="uid://dlq1r4fx753b2" path="res://assets/pixel-adventure/Background/Pink.png" id="2_tcx5b"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wa2eh"]
-shader = ExtResource("1_urw4m")
+[ext_resource type="Texture2D" uid="uid://c3qqpr2tjm7m2" path="res://assets/BG.png" id="3_1ian4"]
 
 [sub_resource type="SystemFont" id="SystemFont_igssy"]
 font_names = PackedStringArray("Press Start 2P")
@@ -17,10 +13,9 @@ font_names = PackedStringArray("Press Start 2P")
 script = ExtResource("1_gsmvy")
 
 [node name="background" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_wa2eh")
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_tcx5b")
+texture = ExtResource("3_1ian4")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 

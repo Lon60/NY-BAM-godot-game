@@ -8,6 +8,7 @@
 font_names = PackedStringArray("Press Start 2P")
 
 [sub_resource type="SystemFont" id="SystemFont_ye4kl"]
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_a3n3k"]
 font_names = PackedStringArray("Arial")
