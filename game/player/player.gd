@@ -16,6 +16,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		SceneSwitcher.switch_scene(levelMenu)
+		
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -30,10 +34,6 @@ func _physics_process(delta):
 			animation_player.play("idle")
 		else:
 			animation_player.play("player_run")
-		
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 	
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("ui_left", "ui_right")
