@@ -4,7 +4,6 @@ extends CharacterBody2D
 var SPEED := 300.0
 const JUMP_VELOCITY := -250.0
 var dead := false
-var animPlaySpecial := false
 var directionRight := true
 
 @onready var player_sprite: Sprite2D = %PlayerSprite
@@ -27,9 +26,9 @@ func _physics_process(delta):
 		else:
 			pass # jump
 	else:
-		if(velocity.x == 0 && !animPlaySpecial) and animation_player.animation_finished:
+		if(velocity.x == 0) and animation_player.animation_finished:
 			animation_player.play("idle")
-		elif !animPlaySpecial:
+		else:
 			animation_player.play("player_run")
 		
 	# Handle jump.
@@ -54,9 +53,6 @@ func _physics_process(delta):
 	
 	if dead:
 		dead = false
-		animPlaySpecial = true
-		await get_tree().create_timer(0.6).timeout
-		animPlaySpecial = false
 		SceneSwitcher.switch_scene(deathScreen)
 
 func playIrisIn():
