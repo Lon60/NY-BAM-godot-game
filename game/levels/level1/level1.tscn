@@ -604,9 +604,6 @@ position = Vector2(9.00001, 3)
 scale = Vector2(119.165, 38.5954)
 texture = ExtResource("2_i5srg")
 
-[node name="player" parent="." instance=ExtResource("2_xt52j")]
-position = Vector2(-16, -17)
-
 [node name="Finish" parent="." instance=ExtResource("7_wyut7")]
 position = Vector2(768, 188)
 scale = Vector2(0.5, 0.5)
@@ -637,3 +634,6 @@ y_sort_origin = 1
 [node name="BouncePad" parent="Helpers" instance=ExtResource("6_7tjcv")]
 position = Vector2(14, -11)
 yBounce = -500
+
+[node name="player" parent="." instance=ExtResource("2_xt52j")]
+position = Vector2(-16, -17)

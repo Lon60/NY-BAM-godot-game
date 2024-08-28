@@ -1,3 +1,4 @@
+Sprite2D
 ColorRect
 Panel
 Node2D
@@ -12,4 +13,3 @@ VBoxContainer
 HBoxContainer
 AnimationPlayer
 AnimationTree
-MarginContainer
