@@ -20,7 +20,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		velocity.y = JUMP_VELOCITY
 		animation_player.play("jump")
 		jump_played = true
-	elif Input.get_axis("ui_left", "ui_right"):
+
+func _physics_process(delta: float) -> void:
+	if Input.get_axis("ui_left", "ui_right"):
 		var direction = Input.get_axis("ui_left", "ui_right")
 		velocity.x = direction * SPEED
 	elif Input.is_action_just_pressed("ui_cancel"):
@@ -29,14 +31,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if is_on_floor():
 			animation_player.play("idle")
-
-func _physics_process(delta: float) -> void:
+	
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * GRAVITY * delta
 	else:
 		if jump_played:
 			jump_played = false
-		
 		if velocity.x == 0 and animation_player.animation_finished:
 			animation_player.play("idle")
 		elif velocity.x != 0:
