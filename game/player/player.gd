@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
 
-var GRAVITY = 1
-var SPEED := 250.0
+const GRAVITY := 1
+const SPEED := 250.0
 const JUMP_VELOCITY := -250.0
+#-----------------------------------
 var dead := false
 var directionRight := true
 var jump_played := false
