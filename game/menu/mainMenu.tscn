@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=4 uid="uid://cm0r0n648lnh0"]
+[gd_scene load_steps=19 format=4 uid="uid://cm0r0n648lnh0"]
 
 [ext_resource type="Script" path="res://menu/mainMenu.gd" id="1_0y1yl"]
 [ext_resource type="Texture2D" uid="uid://c3qqpr2tjm7m2" path="res://assets/BG.png" id="2_4h1jd"]
 [ext_resource type="Texture2D" uid="uid://b77kgtmwais2u" path="res://assets/pixel-adventure/Menu/Buttons/Achievements.png" id="4_r2g0l"]
 [ext_resource type="Texture2D" uid="uid://u6ffipvnqqce" path="res://assets/pixel-adventure/Menu/Buttons/Play.png" id="4_uq31w"]
 [ext_resource type="Texture2D" uid="uid://bv2vqrus4e0r2" path="res://assets/pixel-adventure/Menu/Buttons/Close.png" id="6_1f38h"]
+[ext_resource type="Script" path="res://menu/controlle_support.gd" id="8_ejc32"]
 [ext_resource type="PackedScene" uid="uid://dyl8wy5totvmr" path="res://items/spike/spike.tscn" id="8_l8aif"]
 [ext_resource type="Texture2D" uid="uid://2h1apm8cy3kj" path="res://creations/Bild.png" id="10_tcn7g"]
 [ext_resource type="Texture2D" uid="uid://gcfboygvswqe" path="res://assets/Tiles-and-Enemies_Trans.png" id="12_2jm6l"]
@@ -1304,6 +1305,7 @@ icon = ExtResource("4_uq31w")
 flat = true
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("8_ejc32")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -1320,9 +1322,6 @@ icon = ExtResource("4_r2g0l")
 flat = true
 icon_alignment = 1
 expand_icon = true
-
-[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
-layout_mode = 2
 
 [node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(55, 55)

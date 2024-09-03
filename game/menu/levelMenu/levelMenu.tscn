@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://cw5sdxsiyjux"]
+[gd_scene load_steps=19 format=3 uid="uid://cw5sdxsiyjux"]
 
 [ext_resource type="Script" path="res://menu/levelMenu/levelMenu.gd" id="1_3q0ay"]
+[ext_resource type="Script" path="res://menu/controlle_support.gd" id="2_vrxlt"]
 [ext_resource type="Texture2D" uid="uid://cow1d4qiofmgh" path="res://assets/padlock-pack/Robust Padlock/GOLD/Sprites/Robust Padlock - GOLD - 0000.png" id="5_1dkt4"]
 [ext_resource type="Texture2D" uid="uid://ccs0nfl5gy7tl" path="res://menu/levelMenu/level2.png" id="6_rujvx"]
 [ext_resource type="Texture2D" uid="uid://dmimgx1fkvc3r" path="res://menu/levelMenu/level3.png" id="7_2yrx6"]
@@ -352,6 +353,7 @@ layout_mode = 2
 flat = true
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("2_vrxlt")
 
 [node name="Level2" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(380, 0)

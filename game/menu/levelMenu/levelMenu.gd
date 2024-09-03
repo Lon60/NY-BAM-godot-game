@@ -18,6 +18,11 @@ const lvl3_png = preload("res://menu/levelMenu/level3.png")
 @onready var lvl2_padlock = $MarginContainer/HBoxContainer/Level2/Level2/HBoxContainer/VBoxContainer/padlock
 @onready var lvl3_padlock = $MarginContainer/HBoxContainer/Level3/Level3/HBoxContainer/VBoxContainer/padlock
 
+
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("enter_controller_mode_menu"):
+		pass
+		
 func _process(delta):
 	if GlobalController.canAccessLvl(2):
 		lvl_2_btn.disabled = false
